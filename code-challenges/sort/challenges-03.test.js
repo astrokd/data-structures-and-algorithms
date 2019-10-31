@@ -8,7 +8,7 @@ Write a function named sortBackwards that takes in an array of numbers and retur
 
 const sortBackwards = (arr) => {
   arr.sort( (a, b) => {
-    return a < b;
+    return b - a;
   });
   return arr;
 };
@@ -24,11 +24,19 @@ For example, ['Alphabet', 'Zebra', 'alphabet', 'carrot'] is correctly sorted.
 ------------------------------------------------------------------------------------------------ */
 
 const alphabetize = (arr) => {
-  arr.sort( (a,b) => {
-    return a > b;
+  arr.sort( (a, b)=>{
+    if (a > b) {
+      return 1;
+    }
+    if (a < b) {
+      return -1;
+    }
+    return 0;
   });
   return arr;
 };
+
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
