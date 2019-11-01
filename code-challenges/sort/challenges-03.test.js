@@ -28,10 +28,10 @@ const alphabetize = (arr) => {
     if (a > b) {
       return 1;
     }
-    if (a < b) {
+    else if (a < b) {
       return -1;
-    }
-    return 0;
+    } else {
+      return 0;}
   });
   return arr;
 };
@@ -49,10 +49,10 @@ const sortByLength = (arr) => {
     if (a.length > b.length) {
       return 1;
     }
-    if (a.length < b.length) {
+    else if (a.length < b.length) {
       return -1;
-    }
-    return 0;
+    } else {
+      return 0;}
   });
   return arr;
 };
@@ -67,7 +67,13 @@ For example, ['Alphabet', 'alphabet', 'carrot', 'Zebra'] is correctly sorted, an
 
 const alphabetizeBetter = (arr) => {
   arr.sort( (a,b) => {
-    return a.toUpperCase() > b.toUpperCase();
+    if (a.toUpperCase() > b.toUpperCase()) {
+      return 1;
+    }
+    else if (a.toUpperCase() < b.toUpperCase()) {
+      return -1;
+    } else {
+      return 0;}
   });
   return arr;
 };
