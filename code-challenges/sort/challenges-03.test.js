@@ -142,9 +142,26 @@ const people = [
   new Person('Casey', 'Codefellow', 38),
   new Person('Stan', 'Seattle', 67),
 ];
-
+//&& a.age < b.age
 const sortPeople = (arr) => {
-  // Solution code here...
+  arr.sort ( (a, b) => {
+    if (a.lastName > b.lastName) {
+      return 1;
+    }
+    else if (a.lastName < b.lastName) {
+      return -1;
+    } else {
+      if (a.age > b.age) {
+        return 1;
+      }
+      else if (a.age < b.age) {
+        return -1;
+      } else {
+        return 0;
+      }
+    }
+  });
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
