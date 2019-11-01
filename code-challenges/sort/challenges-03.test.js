@@ -93,7 +93,13 @@ Here is an example of the input:
 
 const sortByPrice = (arr) => {
   arr.sort( (a,b) => {
-    return a.price > b.price;
+    if (a.price > b.price) {
+      return 1;
+    }
+    else if (a.price < b.price) {
+      return -1;
+    } else {
+      return 0;}
   });
   return arr;
 };
