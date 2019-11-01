@@ -26,7 +26,9 @@ Return an array containing all the matches.
 ------------------------------------------------------------------------------------------------ */
 
 const isCapitalized = (str) => {
-  // Solution code here...
+  let regex = /[A-Z]\w+/g;
+  let resultMatch = str.match(regex);
+  return resultMatch;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -36,7 +38,9 @@ Write a function named citiesAtoJ that takes in an array of city names and uses 
 ------------------------------------------------------------------------------------------------ */
 
 const citiesAtoJ = (arr) => {
-  // Solution code here...
+  let regex = /[A-J]\w+/g;
+  let resultMatch = regex.match(arr);
+  return resultMatch;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -52,7 +56,13 @@ Do not use the vertical bar (pipe) in your pattern.
 ------------------------------------------------------------------------------------------------ */
 
 const matchMonth = (input) => {
-  // Solution code here...
+  let regex = /(O?o?ct)/g;
+  let resultReturn = regex.test(input);
+  if (resultReturn) {
+    return resultReturn;
+  } else {
+    return false;
+  }
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -66,7 +76,9 @@ The expected output of "Hello, and have a wonderful day!" is ["and ", "have ", "
 ------------------------------------------------------------------------------------------------ */
 
 const noPunctuation = str => {
-  // Solution code here...
+  let regex = /(\w+\s)/g;
+  let resultMatch = str.match(regex);
+  return resultMatch;
 };
 
 /* ------------------------------------------------------------------------------------------------
