@@ -26,9 +26,12 @@ Return an array containing all the matches.
 ------------------------------------------------------------------------------------------------ */
 
 const isCapitalized = (str) => {
-  let regex = /[A-Z]\w+/g;
-  let resultMatch = str.match(regex);
-  return resultMatch;
+  const regex = /[A-Z]\w+/g;
+  let arr = [];
+  if (regex.test(str)) {
+    arr = str.match(regex);
+  }
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -38,10 +41,11 @@ Write a function named citiesAtoJ that takes in an array of city names and uses 
 ------------------------------------------------------------------------------------------------ */
 
 const citiesAtoJ = (arr) => {
-  let regex = /[A-J]\w+/g;
+  const regex = /^([A|B|C|D|E|F|G|H|I|J])/g;
   let resultMatch = [];
   arr.forEach(function(element){
-    resultMatch.push(regex.match(element));
+    if (regex.test(element)) {
+      resultMatch.push(element);}
   });
   return resultMatch;
 };
@@ -97,7 +101,7 @@ For example, 'Welcome to Code 301!' will return 'W_lc_m_ t_ C_d_ 301!'.
 ------------------------------------------------------------------------------------------------ */
 
 let hangman = (str) => {
-  let regex = /a|e|i|o|u/g;
+  let regex = /a|e|i|o|u|A|E|I|O|U/g;
   let result = str.replace(regex, '_');
   return result;
 };
