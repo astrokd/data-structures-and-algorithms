@@ -7,7 +7,10 @@ Write a function named sortBackwards that takes in an array of numbers and retur
 ------------------------------------------------------------------------------------------------ */
 
 const sortBackwards = (arr) => {
-  // Solution code here...
+  arr.sort( (a, b) => {
+    return b - a;
+  });
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -21,8 +24,19 @@ For example, ['Alphabet', 'Zebra', 'alphabet', 'carrot'] is correctly sorted.
 ------------------------------------------------------------------------------------------------ */
 
 const alphabetize = (arr) => {
-  // Solution code here...
+  arr.sort( (a, b)=>{
+    if (a > b) {
+      return 1;
+    }
+    else if (a < b) {
+      return -1;
+    } else {
+      return 0;}
+  });
+  return arr;
 };
+
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
@@ -31,7 +45,16 @@ Write a function named sortByLength that takes in an array of strings and return
 ------------------------------------------------------------------------------------------------ */
 
 const sortByLength = (arr) => {
-  // Solution code here...
+  arr.sort( (a,b) => {
+    if (a.length > b.length) {
+      return 1;
+    }
+    else if (a.length < b.length) {
+      return -1;
+    } else {
+      return 0;}
+  });
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -43,7 +66,16 @@ For example, ['Alphabet', 'alphabet', 'carrot', 'Zebra'] is correctly sorted, an
 ------------------------------------------------------------------------------------------------ */
 
 const alphabetizeBetter = (arr) => {
-  // Solution code here...
+  arr.sort( (a,b) => {
+    if (a.toUpperCase() > b.toUpperCase()) {
+      return 1;
+    }
+    else if (a.toUpperCase() < b.toUpperCase()) {
+      return -1;
+    } else {
+      return 0;}
+  });
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -60,7 +92,16 @@ Here is an example of the input:
 ------------------------------------------------------------------------------------------------ */
 
 const sortByPrice = (arr) => {
-  // Solution code here...
+  arr.sort( (a,b) => {
+    if (a.price > b.price) {
+      return 1;
+    }
+    else if (a.price < b.price) {
+      return -1;
+    } else {
+      return 0;}
+  });
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -72,7 +113,16 @@ For example, [1, 14, 0.2, -281, 54782] is only correctly sorted in that order.
 ------------------------------------------------------------------------------------------------ */
 
 const sortNumbersByLength = (arr) => {
-  // Solution code here...
+  arr.sort ( (a, b) => {
+    if (a.toString().length > b.toString().length) {
+      return 1;
+    }
+    else if (a.toString().length < b.toString().length) {
+      return -1;
+    } else {
+      return 0;}
+  });
+  return arr;
 };
 
 /*-----------------------------------------------------------------------------------------------
@@ -92,9 +142,26 @@ const people = [
   new Person('Casey', 'Codefellow', 38),
   new Person('Stan', 'Seattle', 67),
 ];
-
+//&& a.age < b.age
 const sortPeople = (arr) => {
-  // Solution code here...
+  arr.sort ( (a, b) => {
+    if (a.lastName > b.lastName) {
+      return 1;
+    }
+    else if (a.lastName < b.lastName) {
+      return -1;
+    } else {
+      if (a.age > b.age) {
+        return 1;
+      }
+      else if (a.age < b.age) {
+        return -1;
+      } else {
+        return 0;
+      }
+    }
+  });
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
