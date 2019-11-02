@@ -79,10 +79,17 @@ const gruffaloCrumble = {
   ]
 };
 
-
 const listFoods = (recipe) => {
   let result = [];
-  // Solution code here...
+  let searchKeys = ['sized ','pounds ','pound ','cups ','gallons '];
+  recipe.ingredients.forEach(element => {
+    searchKeys.forEach(ele =>{
+      let i = element.indexOf(ele);
+      if (i !== -1) {
+        result.push(element.slice(i+ele.length,element.length));
+      }
+    });
+  })
   return result;
 };
 
