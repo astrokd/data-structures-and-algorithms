@@ -199,7 +199,21 @@ For example, removeVowels('gregor') returns 'grgr'.
 ------------------------------------------------------------------------------------------------ */
 
 const removeVowels = (str) => {
-  // Solution code here...
+  let vowels = ['a','i','e','o','u'];
+  let chars = str.split('');
+  let consant = '';
+  for (let i = 0;i < chars.length;i++) {
+    vowels.forEach(vol => {
+      if (chars[i] === vol) {
+        chars.splice(i,1);
+        i--
+      }
+    });
+  }
+  chars.forEach(ele => {
+    consant = consant + ele;
+  });
+  return consant;
 };
 
 /* ------------------------------------------------------------------------------------------------
