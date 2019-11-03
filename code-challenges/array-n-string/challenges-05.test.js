@@ -103,7 +103,14 @@ You may also use other string or array methods.
 
 const splitFoods = (recipe) => {
   let result = [];
-  // Solution code here...
+  let searchKeys = ['sized ','pounds ','pound ','cups ','gallons '];
+  recipe.ingredients.forEach(element => {
+    searchKeys.forEach(ele =>{
+      if (element.indexOf(ele) !== -1) {
+        result.push(element.split(ele)[1]);
+      }
+    });
+  })
   return result;
 };
 
