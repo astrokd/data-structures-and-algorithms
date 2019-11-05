@@ -90,8 +90,13 @@ hasChildrenValues(characters, 'Sansa') will return false
 ------------------------------------------------------------------------------------------------ */
 
 const hasChildrenValues = (arr, character) => {
-  // Solution code here...
-
+  let bol = false;
+  Object.values(arr).forEach(value => {
+    if (value.name === character && value.children) {
+      bol = true;
+    }
+  });
+  return bol;
 };
 
 /* ------------------------------------------------------------------------------------------------
