@@ -74,8 +74,10 @@ const evenOdd = (arr) => {
   let numArr = arr.map( a => {
     if (a%2 === 0) {
       return 'even';
-    } else {
+    } else if (a%2 === 1) {
       return 'odd';
+    } else {
+      return 'N/A';
     }
   });
   return numArr;
@@ -124,7 +126,8 @@ const snorlaxAbilities = {
 };
 
 const extractAbilities = (arr) => {
-  // Solution code here...
+  let abilityArr = arr.map( a => a.ability.name);
+  return abilityArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
