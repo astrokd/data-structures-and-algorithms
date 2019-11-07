@@ -102,7 +102,12 @@ For example, getStatName(snorlaxData.stats, 50) will return ['special-defense', 
 ------------------------------------------------------------------------------------------------ */
 
 const getStatName = (arr, minBaseStat) => {
-  // Solution code here...
+  let outputArr = [];
+  let baseStat = arr.filter( data => (data.baseStat > minBaseStat));
+  baseStat.forEach(ele => {
+    outputArr.push(ele.stat.name)
+  });
+  return outputArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -155,7 +160,8 @@ const characters = [
 ];
 
 const getCharactersWithoutChildren = (arr) => {
-  // Solution code here...
+  let childless = arr.filter( data => !(data.children));
+  return childless;
 };
 
 /* ------------------------------------------------------------------------------------------------
