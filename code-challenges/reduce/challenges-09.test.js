@@ -187,7 +187,12 @@ const isPrime = (value) => {
 };
 
 const countPrimeNumbers = (arr) => {
-  // Solution code here...
+  const total = arr.reduce( (accum,val) => {
+    if (isPrime(val)) {
+      return accum+1;
+    }
+  }, 0);
+  return total;
 };
 
 /* ------------------------------------------------------------------------------------------------
