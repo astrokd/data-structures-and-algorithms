@@ -11,6 +11,8 @@ Note: You might need to use the same method more than once.
 For example, count(5, [[1, 3, 5, 7, 9], [5, 5, 5], [1, 2, 3]]) returns 4.
 ------------------------------------------------------------------------------------------------ */
 
+// with help from https://stackoverflow.com/questions/16468124/count-values-of-the-inner-two-dimensional-array-javascript
+
 const count = (target, input) => {
   let num = 0;
   input.reduce((count, row) => {
@@ -56,7 +58,18 @@ For example, [ [0,2,5,4], [2,4,10], [] ] should return [ [1, 32], [1024], [] ].
 ------------------------------------------------------------------------------------------------ */
 
 const divisibleByFiveTwoToThePower = (input) => {
-  // Solution code here...
+  let list = [];
+  input.reduce((count, row) => {
+    let valNum = row.map((val) => {
+      if (val%5 === 0) {
+        return Math.pow(2,val);
+      } else {
+        return 'empty';
+      }
+    },[]);
+    return list.push(valNum);
+  }, []);
+  return list;
 };
 
 /* ------------------------------------------------------------------------------------------------
