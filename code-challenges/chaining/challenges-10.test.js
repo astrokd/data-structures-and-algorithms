@@ -11,8 +11,18 @@ Note: You might need to use the same method more than once.
 For example, count(5, [[1, 3, 5, 7, 9], [5, 5, 5], [1, 2, 3]]) returns 4.
 ------------------------------------------------------------------------------------------------ */
 
+// with help from https://stackoverflow.com/questions/16468124/count-values-of-the-inner-two-dimensional-array-javascript
+
 const count = (target, input) => {
-  // Solution code here...
+  let num = 0;
+  input.reduce((count, row) => {
+    row.map((val) => {
+      if (val === target) {
+        num = num + 1;
+      }
+    },0);
+  }, 0);
+  return num;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -26,7 +36,13 @@ For example, [[1, 2, 3, 4, 5], [6, 7, 2, 4, 5, 7], [9, 2, 3, 6,]] returns 66.
 ------------------------------------------------------------------------------------------------ */
 
 const totalSum = (input) => {
-  // Solution code here...
+  let num = 0;
+  input.reduce((count, row) => {
+    row.map((val) => {
+      num = num + val;
+    },0);
+  }, 0);
+  return num;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -40,9 +56,20 @@ This function should then raise 2 to the power of the resulting numbers, returni
 
 For example, [ [0,2,5,4], [2,4,10], [] ] should return [ [1, 32], [1024], [] ].
 ------------------------------------------------------------------------------------------------ */
+//Jerica helped me get the newList idea
 
 const divisibleByFiveTwoToThePower = (input) => {
-  // Solution code here...
+  let list = [];
+  input.reduce((count, row) => {
+    let newList = [];
+    row.map((val) => {
+      if (val%5 === 0 && typeof val === 'number') {
+        newList.push(Math.pow(2,val));
+      }
+    },[]);
+    return list.push(newList);
+  }, []);
+  return list;
 };
 
 /* ------------------------------------------------------------------------------------------------
