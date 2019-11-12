@@ -56,6 +56,7 @@ This function should then raise 2 to the power of the resulting numbers, returni
 
 For example, [ [0,2,5,4], [2,4,10], [] ] should return [ [1, 32], [1024], [] ].
 ------------------------------------------------------------------------------------------------ */
+//Jerica helped me get the newList idea
 
 const divisibleByFiveTwoToThePower = (input) => {
   let list = [];
