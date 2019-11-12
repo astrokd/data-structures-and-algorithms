@@ -60,14 +60,13 @@ For example, [ [0,2,5,4], [2,4,10], [] ] should return [ [1, 32], [1024], [] ].
 const divisibleByFiveTwoToThePower = (input) => {
   let list = [];
   input.reduce((count, row) => {
-    let valNum = row.map((val) => {
-      if (val%5 === 0) {
-        return Math.pow(2,val);
-      } else {
-        return 'empty';
+    let newList = [];
+    row.map((val) => {
+      if (val%5 === 0 && typeof val === 'number') {
+        newList.push(Math.pow(2,val));
       }
     },[]);
-    return list.push(valNum);
+    return list.push(newList);
   }, []);
   return list;
 };
