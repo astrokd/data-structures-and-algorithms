@@ -1,9 +1,9 @@
 # data-structures-and-algorithms
 CodeFellows Code Challenges
 
-- 01 -- For Each <span style="color:green">✓</span>
+- 01 -- For Each ![✓](https://icon-library.net/images/small-check-mark-icon/small-check-mark-icon-0.jpg) 
 	- Done
-- 02 -- Value vs Reference <font color='green'>✓</font>
+- 02 -- Value vs Reference ![✓](https://icon-library.net/images/small-check-mark-icon/small-check-mark-icon-0.jpg) 
 	- Done
 - 03 -- Sort
 	- Done all but stretch
