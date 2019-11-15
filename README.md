@@ -1,7 +1,7 @@
 # data-structures-and-algorithms
 CodeFellows Code Challenges
 
-- 01 -- For Each <font color='green'>✓</font>
+- 01 -- For Each <span style="color:green">✓</span>
 	- Done
 - 02 -- Value vs Reference <font color='green'>✓</font>
 	- Done
