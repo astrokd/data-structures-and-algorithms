@@ -1,9 +1,9 @@
 # data-structures-and-algorithms
 CodeFellows Code Challenges
 
-- 01 -- For Each
+- 01 -- For Each ✓ { color: green }
 	- Done
-- 02 -- Value vs Reference
+- 02 -- Value vs Reference ✓ { color: green }
 	- Done
 - 03 -- Sort
 	- Done all but stretch
@@ -11,19 +11,19 @@ CodeFellows Code Challenges
 	- Done
 - 05 -- Array and Strings
 	- Done all but stretch
-- 06 -- Object 
+- 06 -- Object :x:
 	- Done all but 4 and stretch
 - 07 -- Map
 	- Done
 - 08 -- Filter
 	- Done all but stretch
-- 09 -- Reduce
+- 09 -- Reduce :x:
 	- Done all but 6 and stretch
-- 10 -- Chaining
+- 10 -- Chaining :x: :x: 
 	- Done all but 4 and 5
 - 11 -- Regex 2
 	- Done all but stretch
-- 12 -- 2d Array . ❌
+- 12 -- 2d Array :x: :x: :x:
 	- Done 1 - 4 need to do 5 - 8
 - 13 -- String Manipulation
 	- Done expect stretch
