@@ -1,9 +1,9 @@
 # data-structures-and-algorithms
 CodeFellows Code Challenges
 
-- 01 -- For Each ✓{ color: green }
+- 01 -- For Each <font color='green'>✓</font>
 	- Done
-- 02 -- Value vs Reference ✓{ color: green }
+- 02 -- Value vs Reference <font color='green'>✓</font>
 	- Done
 - 03 -- Sort
 	- Done all but stretch
