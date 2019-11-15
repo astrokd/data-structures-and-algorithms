@@ -1,31 +1,31 @@
 # data-structures-and-algorithms
 CodeFellows Code Challenges
 
-- 01 For Each
+- 01 -- For Each
 	- Done
-- 02 Value vs Reference
+- 02 -- Value vs Reference
 	- Done
-- 03 Sort
+- 03 -- Sort
 	- Done all but stretch
-- 04 Regex 1
+- 04 -- Regex 1
 	- Done
-- 05 Array and Strings
+- 05 -- Array and Strings
 	- Done all but stretch
-- 06 Object 
+- 06 -- Object 
 	- Done all but 4 and stretch
-- 07 Map
+- 07 -- Map
 	- Done
-- 08 Filter
+- 08 -- Filter
 	- Done all but stretch
-- 09 Reduce
+- 09 -- Reduce
 	- Done all but 6 and stretch
-- 10 Chaining
+- 10 -- Chaining
 	- Done all but 4 and 5
-- 11 Regex 2
+- 11 -- Regex 2
 	- Done all but stretch
-- 12 2d Array
+- 12 -- 2d Array
 	- Done 1 - 4 need to do 5 - 8
-- 13 String Manipulation
+- 13 -- String Manipulation
 	- Done expect stretch
-- 14 Combined review
+- 14 -- Combined review
 	- Done all but stretch
