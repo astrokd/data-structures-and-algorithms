@@ -30,7 +30,7 @@ Note: if you ever need to validate an email using a regex in practice, the Inter
 ------------------------------------------------------------------------------------------------ */
 
 const validateEmail = (email) => {
-  let regex = /^\w+.?\w+[a-z]@[a-z]\w+.[a-z]{3}$/gi;
+  let regex = /^\w+.?\w+[a-z]@[a-z]\w+.[com|net|org]{3}$/gi;
   return regex.test(email);
 };
 
@@ -56,7 +56,7 @@ Return either true or false.
 ------------------------------------------------------------------------------------------------ */
 
 const validatePhoneNumber = (phoneNumber) => {
-  let regex = /^[^(]?(\(\d\d\d\))|(\d\d\d)(\-? ?)(\d\d\d)(\-? ?)(\d\d\d\d)$/g;
+  let regex = /^(\d\d\d\d\d\d\d\d\d\d)$|^(\d\d\d \d\d\d \d\d\d\d)$|^(\(\d\d\d\) \d\d\d\-\d\d\d\d)$|^(\d\d\d \d\d\d\-\d\d\d\d)$|^(\d\d\d\-\d\d\d\-\d\d\d\d)$|^(\d\d\d \d\d\d\d\d\d\d)$/g;
   return regex.test(phoneNumber);
 };
 
