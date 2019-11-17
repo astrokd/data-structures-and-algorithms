@@ -23,8 +23,8 @@ CodeFellows Code Challenges
 	- Done all but 4 and 5
 - 11 -- Regex 2 ✓
 	- Done all but stretch
-- 12 -- 2d Array :x: :x: :x:
-	- Done 1 - 4 need to do 5 - 8
+- 12 -- 2d Array ✅
+	- Done
 - 13 -- String Manipulation ✓
 	- Done expect stretch
 - 14 -- Combined review ✓
