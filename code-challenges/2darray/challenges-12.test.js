@@ -165,7 +165,16 @@ let lowestWeeklyTemperatureData = [
 ];
 
 const lowestWeeklyAverage = (weather) => {
-  // Solution code here...
+  let weekAvgs = [];
+  let average = 0;
+  weather.forEach( week => {
+    week.forEach( ele => {
+      average += ele;
+    });
+    weekAvgs.push((average/7));
+    average = 0;
+  });
+  return Math.min(...weekAvgs);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -268,7 +277,7 @@ describe('Testing challenge 6', () => {
   });
 });
 
-xdescribe('Testing challenge 7', () => {
+describe('Testing challenge 7', () => {
   test('It should return the lowest weekly average temperature within the data set', () => {
     expect(lowestWeeklyAverage(weeklyTemperatures)).toStrictEqual(57);
     expect(lowestWeeklyAverage(lowestWeeklyTemperatureData)).toStrictEqual(46);
