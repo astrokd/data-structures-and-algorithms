@@ -17,8 +17,8 @@ CodeFellows Code Challenges
 	- Done
 - 08 -- Filter ✓
 	- Done all but stretch
-- 09 -- Reduce :x:
-	- Done all but 6 and stretch
+- 09 -- Reduce ✅
+	- Done all but stretch
 - 10 -- Chaining ✅
 	- Done
 - 11 -- Regex 2 ✓
