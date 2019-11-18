@@ -109,8 +109,8 @@ The input and output of this function are the same as the input and output from 
 
 const hasChildrenEntries = (arr, character) => {
   let bol = false;
-  Object.entries(arr).forEach(entry => {
-    if (entry[1].name === character && entry[1].children) {
+  arr.forEach(entry => {
+    if (entry.name === character && entry.children.length > 0) {
       bol = true;
     }
   });
