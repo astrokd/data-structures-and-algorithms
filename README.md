@@ -5,27 +5,27 @@ CodeFellows Code Challenges
 	- Done
 - 02 -- Value vs Reference ✅
 	- Done
-- 03 -- Sort ✓
+- 03 -- Sort ✅
 	- Done all but stretch
 - 04 -- Regex 1 ✅
 	- Done
-- 05 -- Array and Strings ✓
+- 05 -- Array and Strings ✅
 	- Done all but stretch
 - 06 -- Object ✅
 	- Done all but stretch
 - 07 -- Map ✅
 	- Done
-- 08 -- Filter ✓
+- 08 -- Filter ✅
 	- Done all but stretch
 - 09 -- Reduce ✅
 	- Done all but stretch
 - 10 -- Chaining ✅
 	- Done
-- 11 -- Regex 2 ✓
+- 11 -- Regex 2 ✅
 	- Done all but stretch
 - 12 -- 2d Array ✅
 	- Done
-- 13 -- String Manipulation ✓
+- 13 -- String Manipulation ✅
 	- Done expect stretch
-- 14 -- Combined review ✓
+- 14 -- Combined review ✅
 	- Done all but stretch
