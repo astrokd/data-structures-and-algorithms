@@ -19,8 +19,8 @@ CodeFellows Code Challenges
 	- Done all but stretch
 - 09 -- Reduce :x:
 	- Done all but 6 and stretch
-- 10 -- Chaining :x: :x: 
-	- Done all but 4 and 5
+- 10 -- Chaining ✅
+	- Done
 - 11 -- Regex 2 ✓
 	- Done all but stretch
 - 12 -- 2d Array ✅
