@@ -11,8 +11,8 @@ CodeFellows Code Challenges
 	- Done
 - 05 -- Array and Strings ✓
 	- Done all but stretch
-- 06 -- Object :x:
-	- Done all but 4 and stretch
+- 06 -- Object ✅
+	- Done all but stretch
 - 07 -- Map ✅
 	- Done
 - 08 -- Filter ✓
