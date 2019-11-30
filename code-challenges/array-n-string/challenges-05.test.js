@@ -227,7 +227,28 @@ Similarly, extractVowels('The quick brown fox') returns ['Th qck brwn fx', 'eioo
 ------------------------------------------------------------------------------------------------ */
 
 const extractVowels = (str) => {
-  // Solution code here...
+  let vowels = ['a','i','e','o','u'];
+  let chars = str.split('');
+  let consant = '';
+  let del = [];
+  let arr = [];
+  let idx = 0;
+  for (let i = 0;i < chars.length;i++) {
+    vowels.forEach(vol => {
+      if (chars[i] === vol) {
+        del[idx] = (chars.splice(i,1));
+        idx++
+        i--
+      }
+    });
+  }
+  chars.forEach(ele => {
+    consant = consant + ele;
+  });
+  del.sort();
+  arr[0] = consant;
+  arr[1] = del.join('');
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -308,14 +329,14 @@ describe('Testing challenge 7', () => {
   });
 });
 
-xdescribe('Testing challenge 8', () => {
+describe('Testing challenge 8', () => {
   test('It should add up the numbers contained within the string', () => {
     expect(totalSumCSV('1,4,5,7,2')).toStrictEqual(19);
     expect(totalSumCSV('147')).toStrictEqual(147);
   });
 });
 
-xdescribe('Testing challenge 9', () => {
+describe('Testing challenge 9', () => {
   test('It should return the string without vowels', () => {
     expect(removeVowels('gregor')).toStrictEqual('grgr');
     expect(removeVowels('gregor').length).toStrictEqual(4);
@@ -324,7 +345,7 @@ xdescribe('Testing challenge 9', () => {
   });
 });
 
-xdescribe('Testing challenge 10', () => {
+describe('Testing challenge 10', () => {
   test('It should return the string without vowels', () => {
     expect(extractVowels('gregor')).toStrictEqual(['grgr', 'eo']);
     expect(extractVowels('gregor').length).toStrictEqual(2);
