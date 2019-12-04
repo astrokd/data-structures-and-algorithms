@@ -120,7 +120,15 @@ For example, [['Brook Testing', 'Actual Person'], ['Human Person', 'Brook again'
 ------------------------------------------------------------------------------------------------ */
 
 const unenrollBrook = (arr) => {
-  // Solution code here...
+  arr.forEach( (arr1,idx1) => {
+    for(let i = 0; i < arr1.length;i++) {
+      if (arr1[i].includes('Brook')) {
+        arr[idx1].splice(i,1);
+        i--;
+      }
+    }
+  });
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
