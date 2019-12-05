@@ -155,7 +155,8 @@ For example, ['Tuesday', 'Monday', 'Wednesday and Thursday', 'Tuesday 2', 'Thurs
 const daysOfWeek = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
 
 const sortByDay = (arr) => {
-  let sortedWeek = new Array(daysOfWeek.length).fill([]);
+  let sortedWeek = [[],[],[],[],[],[],[]];
+  // new Array(daysOfWeek.length).fill([]);
 
   arr.forEach(ele => {
     if(ele.toLowerCase().includes('monday')) {sortedWeek[0].push(ele)}
@@ -164,7 +165,7 @@ const sortByDay = (arr) => {
     if(ele.toLowerCase().includes('thursday')) {sortedWeek[3].push(ele)}
     if(ele.toLowerCase().includes('friday')) {sortedWeek[4].push(ele)}
     if(ele.toLowerCase().includes('saturday')) {sortedWeek[5].push(ele)}
-    if(ele.toLowerCase().includes('sunday')) {sortedWeek[6].push(day)}
+    if(ele.toLowerCase().includes('sunday')) {sortedWeek[6].push(ele)}
   });
   return sortedWeek;
 };
@@ -278,7 +279,7 @@ describe('Testing challenge 8', () => {
   });
 });
 
-xdescribe('Testing challenge 9', () => {
+describe('Testing challenge 9', () => {
   test('It should sort events by the day on which they happen', () => {
     const events = ['Dancing on Mondays and Tuesdays', 'Meet the inventors! Monday, August 7', 'in the club on a Tuesday', 'Thursday Night Code', 'Saturday Night Fever'];
     const sortedEvents = sortByDay(events);
