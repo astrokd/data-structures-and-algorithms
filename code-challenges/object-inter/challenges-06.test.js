@@ -146,7 +146,14 @@ For example: [{ house: 'Stark', members: 7 }, { house: 'Arryn', members: 3 }, ..
 
 const houseSize = (arr) => {
   const sizes = [];
-  // Solution code here...
+  Object.values(arr).forEach(val => {
+    let count = 0;
+    if (val.spouse !== null || val.spouse !== undefined) { count++}
+    if (val.children.length > 0) {
+      count = count + val.children.length + 1;
+    }
+    sizes.push({house: val.house, members: count});
+  })
   return sizes;
 };
 
@@ -224,7 +231,7 @@ describe('Testing challenge 5', () => {
   });
 });
 
-xdescribe('Testing challenge 6', () => {
+describe('Testing challenge 6', () => {
   test('It should return an object for each house containing the name and size', () => {
     expect(houseSize(characters)).toStrictEqual([{ house: 'Stark', members: 7 }, { house: 'Arryn', members: 3 }, { house: 'Lannister', members: 5 }, { house: 'Targaryen', members: 5 }, { house: 'Tyrell', members: 4 }, { house: 'Greyjoy', members: 1 }, { house: 'Snow', members: 1 }]);
     expect(houseSize(characters).length).toStrictEqual(7);
