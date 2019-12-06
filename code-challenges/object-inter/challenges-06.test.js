@@ -71,7 +71,7 @@ let characters = [
 
 const getHouses = (arr) => {
   let houses = [];
-  Object.values(arr).forEach(value => {
+  arr.forEach(value => {
     houses.push(value.house);
   });
   return houses;
@@ -91,7 +91,7 @@ hasChildrenValues(characters, 'Sansa') will return false
 
 const hasChildrenValues = (arr, character) => {
   let bol = false;
-  Object.values(arr).forEach(value => {
+  arr.forEach(value => {
     if (value.name === character && value.children) {
       bol = true;
     }
@@ -125,7 +125,7 @@ Write a function named totalCharacters that takes in an array and returns the nu
 
 const totalCharacters = (arr) => {
   let count = 0;
-  Object.values(arr).forEach(value => {
+  arr.forEach(value => {
     count = count + value.children.length + 1;
     if (value.spouse) {
       count = count + 1;
@@ -146,7 +146,7 @@ For example: [{ house: 'Stark', members: 7 }, { house: 'Arryn', members: 3 }, ..
 
 const houseSize = (arr) => {
   const sizes = [];
-  Object.values(arr).forEach(val => {
+  arr.forEach(val => {
     let count = 0;
     if (val.spouse !== null || val.spouse !== undefined) { count++}
     if (val.children.length > 0) {
