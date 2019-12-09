@@ -177,20 +177,13 @@ const detectTicTacToeWin = (board) => {
       return true;
     } else {return false;}
   };
-  // Top row
-  if (helpCheck(0,0,0,1,0,2)) { return true; }
-  // Middle row
-  else if (helpCheck(1,0,1,1,1,2)) { return true; }
-  // Bottom row
-  else if (helpCheck(2,0,2,1,2,2)) { return true; }
-  // Left column
-  else if (helpCheck(0,0,1,0,2,0)) { return true; }
-  // Middle column
-  else if (helpCheck(0,1,1,1,2,1)) { return true; }
-  // Right column
-  else if (helpCheck(0,2,1,2,2,2)) { return true; }
+  // Rows and Columns
+  for(let i=0;i<3;i++){
+    if (helpCheck(i,0,i,1,i,2)) { return true; 
+    } else if (helpCheck(0,i,1,i,2,i)) { return true;}
+  }
   // Diagonal right
-  else if (helpCheck(0,0,1,1,2,2)) { return true; }
+  if (helpCheck(0,0,1,1,2,2)) { return true; }
   // Diagonal left
   else if (helpCheck(2,0,1,1,0,2)) { return true; }
   else {return false}
