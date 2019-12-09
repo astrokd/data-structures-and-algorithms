@@ -169,7 +169,31 @@ Here is a sample board:
 ------------------------------------------------------------------------------------------------ */
 
 const detectTicTacToeWin = (board) => {
-  // Solution code here...
+  //Helper function
+  const helpCheck = (row1, col1, row2, col2, row3, col3) => {
+    if (board[row1][col1] === 'X' && board[row2][col2] === 'X' && board[row3][col3] === 'X') {
+      return true;
+    } else if (board[row1][col1] === 'O' && board[row2][col2] === 'O' && board[row3][col3] === 'O') {
+      return true;
+    } else {return false;}
+  };
+  // Top row
+  if (helpCheck(0,0,0,1,0,2)) { return true; }
+  // Middle row
+  else if (helpCheck(1,0,1,1,1,2)) { return true; }
+  // Bottom row
+  else if (helpCheck(2,0,2,1,2,2)) { return true; }
+  // Left column
+  else if (helpCheck(0,0,1,0,2,0)) { return true; }
+  // Middle column
+  else if (helpCheck(0,1,1,1,2,1)) { return true; }
+  // Right column
+  else if (helpCheck(0,2,1,2,2,2)) { return true; }
+  // Diagonal right
+  else if (helpCheck(0,0,1,1,2,2)) { return true; }
+  // Diagonal left
+  else if (helpCheck(2,0,1,1,0,2)) { return true; }
+  else {return false}
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -237,7 +261,7 @@ describe('Testing challenge 4', () => {
   });
 });
 
-xdescribe('Testing challenge 5', () => {
+describe('Testing challenge 5', () => {
   test('It should return true if there are three in a row', () => {
     expect(detectTicTacToeWin([['X', '', 'O'], ['X', 'O', ''], ['X', 'O', 'X']])).toStrictEqual(true);
     expect(detectTicTacToeWin([['O', '', 'X'], ['X', 'O', 'X'], ['X', '', 'O']])).toStrictEqual(true);
