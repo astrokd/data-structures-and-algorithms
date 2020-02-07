@@ -9,10 +9,7 @@ Note: You may not use the array's built-in length property.
 ------------------------------------------------------------------------------------------------ */
 
 const countNumberOfElements = (arr) => {
-  const count = arr.reduce( (accum) => {
-    return accum+1;
-  });
-  return count;
+  return arr.reduce(accum => accum+1);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -89,10 +86,7 @@ Note: You must use reduce for this challenge. You may not use the built-in .reve
 
 const reversedString = (str) => {
   let arr = str.split('');
-  let reversed = arr.reduce( (newStr, currentLetter) => {
-    return currentLetter + newStr;
-  }, '');
-  return reversed;
+  return arr.reduce( (newStr, currentLetter) => {return currentLetter + newStr}, '');
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -163,9 +157,7 @@ Hint: The accumulator should begin as { count: 0, sum: 0 }
 ------------------------------------------------------------------------------------------------ */
 
 const calculateAverage = (arr) => {
-  const total = arr.reduce( (accum,val) => {
-    return (accum+val);
-  });
+  const total = arr.reduce( (accum,val) => {return accum+val});
   return total/arr.length;
 };
 
