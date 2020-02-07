@@ -9,8 +9,7 @@ For example, ['this is great :)', 'wow', 'whyyyyyy :(', ':)))))'] returns ['t', 
 ------------------------------------------------------------------------------------------------ */
 
 const firstLetters = (arr) => {
-  let strArr = arr.map(ele => ele[0])
-  return strArr;
+  return arr.map(ele => ele[0]);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -85,10 +84,7 @@ Write a function named findAnything that takes in an array of strings, along wit
 ------------------------------------------------------------------------------------------------ */
 
 const findAnything = (arr, target) => {
-  let arrStr = arr.filter(str => {
-    return str.includes(target);
-  });
-  return arrStr;
+  return arr.filter(str => str.includes(target));
 };
 
 /* ------------------------------------------------------------------------------------------------
