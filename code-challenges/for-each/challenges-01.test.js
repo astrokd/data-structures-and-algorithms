@@ -144,7 +144,7 @@ Return the resulting output array.
 const fizzbuzz = (arr) => {
   let outputArr = [];
   arr.forEach( (value) => {
-    if ((value % 3) === 0 && (value % 5) === 0) {
+    if ((value % 15) === 0) {
       outputArr.push('Fizz Buzz');
     } else if ((value % 3) === 0) {
       outputArr.push('Fizz');
