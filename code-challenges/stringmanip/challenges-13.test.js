@@ -84,10 +84,7 @@ Write a function named findAnything that takes in an array of strings, along wit
 ------------------------------------------------------------------------------------------------ */
 
 const findAnything = (arr, target) => {
-  let arrStr = arr.filter(str => {
-    return str.includes(target);
-  });
-  return arrStr;
+  return arr.filter(str => str.includes(target));
 };
 
 /* ------------------------------------------------------------------------------------------------
