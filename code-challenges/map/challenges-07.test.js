@@ -53,8 +53,7 @@ For example: charCode(['h','i']) returns [104, 105].
 ------------------------------------------------------------------------------------------------ */
 
 const charCode = (arr) => {
-  let charArr = arr.map( a => a.charCodeAt());
-  return charArr;
+  return arr.map( a => a.charCodeAt());
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -123,8 +122,7 @@ const snorlaxAbilities = {
 };
 
 const extractAbilities = (arr) => {
-  let abilityArr = arr.map( a => a.ability.name);
-  return abilityArr;
+  return arr.map( a => a.ability.name);
 };
 
 /* ------------------------------------------------------------------------------------------------
