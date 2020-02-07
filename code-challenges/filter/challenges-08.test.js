@@ -9,8 +9,7 @@ For example, oddValues([1,2,3]) returns [1,3].
 ------------------------------------------------------------------------------------------------ */
 
 const oddValues = (arr) => {
-  let odds = arr.filter( n => (n%2));
-  return odds;
+  return arr.filter( n => (n%2));
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -45,8 +44,7 @@ For example, notInFirstArray([1,2,3], [1,2,3,4]) returns [4].
 ------------------------------------------------------------------------------------------------ */
 
 const notInFirstArray = (forbiddenValues, arr) => {
-  let forbidden = arr.filter( str => !(forbiddenValues.includes(str)))
-  return forbidden;
+  return arr.filter( str => !(forbiddenValues.includes(str)));
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -160,8 +158,7 @@ const characters = [
 ];
 
 const getCharactersWithoutChildren = (arr) => {
-  let childless = arr.filter( data => !(data.children));
-  return childless;
+  return arr.filter( data => !(data.children));
 };
 
 /* ------------------------------------------------------------------------------------------------
