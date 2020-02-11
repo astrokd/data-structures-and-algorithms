@@ -12,4 +12,4 @@ Used a loop the reverse through the array and push each element in an empty arra
 
 ## Solution
 <!-- Embedded whiteboard image -->
-![Whiteboard Image](./assets/cc-class1.jpg)
+![Whiteboard Image](./assets/array-reverse.jpg)
