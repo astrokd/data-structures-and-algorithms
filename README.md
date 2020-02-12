@@ -1,5 +1,11 @@
 # data-structures-and-algorithms
-CodeFellows Code Challenges
+CodeFellows 401 Challenges
+
+ - [x] Class 01
+ - [x] Class 02
+ - [ ] Class 03
+
+CodeFellows 301 Code Challenges
 
 - 01 -- for-each ✅ (Array.forEach())
 - 02 -- value-vs-Reference ✅ (Pass by Reference)
