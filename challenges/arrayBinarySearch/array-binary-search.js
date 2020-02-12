@@ -12,7 +12,7 @@ For parameters:
 [11,22,33,44,55,66,77], 90 output: -1
 
 Input <--- sorted array, searchKey
-Output <--- number
+Output <--- number, the index of the searchKey or -1
 
 Calculate the middle index of the sorted array,
 If middle index is equal, return middle index,
@@ -32,4 +32,8 @@ Else return -1.
 let binarySearch = (sortedArray,searchKey) => {
     const middleIndex = Math.round(sortedArray/2);
 
+
+
 }
+
+module.exports = binarySearch;
