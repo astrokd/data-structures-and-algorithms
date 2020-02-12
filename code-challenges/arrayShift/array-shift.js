@@ -1,5 +1,4 @@
-/* ----------------------
-array-shift
+/* array-shift
 
 write a function that takes an array and a value to add to the array and 
 addes the value to the middle of the array.
@@ -13,8 +12,7 @@ insertShiftArray(arr,val)
 INPUT array and a value
 OUTPUT array with value in the middle
  
-RETURN array 
----------------------- */
+RETURN array */
 
 let insertShiftArray = (array,value) => {
     const arrayLength = array.length;
@@ -33,22 +31,18 @@ let insertShiftArray = (array,value) => {
     return resultArray;
   }
 
+
+
 /* ------------------------------------------------------------------------------------------------
 TESTS
  
 npm test challenges/arrayShift/array-shift.js
 ------------------------------------------------------------------------------------------------ */
 
-// describe('Array-Shift', () => {
-//   const orgArray = [2,4,6,8];
-//   const updated = [2,4,5,6,8];
-//   let emptyArray = [];
-//   const newValue = 5;
-//     it('It should return an array with a given value in the middle', () => {
-//       emptyArray = insertShiftArray(orgArray,newValue);
-//       expect(emptyArray).not.toEqual(orgArray);
-//       expect(emptyArray).toEqual(updated);
-//     });
-// });
 
-module.exports = insertShiftArray;
+  describe('Array-Shift', () => {
+    test('It should return an array with a given value in the middle', () => {
+      expect(insertShiftArray([2,4,6,8], 5)).toStrictEqual([2,4,5,6,8]);
+      expect(insertShiftArray([4,8,15,23,42], 16).toStrictEqual([4,8,15,16,23,42]));
+    });
+  });
