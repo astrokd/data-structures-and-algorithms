@@ -11,10 +11,22 @@
 // insertShiftArray(arr,val)
 // INPUT array and a value
 // OUTPUT array with value in the middle
-// array.splice(round(array.length/2), 0, value)
+// 
 // RETURN array
 
 let insertShiftArray = (array,value) => {
-    array.splice(Math.round(array.length/2), 0, value);
-    return array;
-}
+    const arrayLength = array.length;
+    const middleIndex = Math.round(arrayLength/2);
+    let resultArray = [];
+  
+    for (let i = 0; i<arrayLength; i++) {
+  
+      if (i === middleIndex) {
+        resultArray.push(value,array[i]);
+      } else {
+        resultArray.push(array[i]);
+      }
+  
+    }
+    return resultArray;
+  }
