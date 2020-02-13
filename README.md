@@ -3,7 +3,7 @@ CodeFellows 401 Challenges
 
  - [x] Class 01
  - [x] Class 02
- - [ ] Class 03
+ - [x] Class 03
 
 CodeFellows 301 Code Challenges
 
