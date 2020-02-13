@@ -10,6 +10,7 @@ If the element doesn't exist return -1
 
 ## Approach & Efficiency
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+helped by https://www.geeksforgeeks.org/binary-search-in-javascript/
 Input <--- sorted array, searchKey
 
 Output <--- number, the index of the searchKey or -1
