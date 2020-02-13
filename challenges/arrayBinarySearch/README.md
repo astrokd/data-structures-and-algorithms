@@ -11,6 +11,7 @@ If the element doesn't exist return -1
 ## Approach & Efficiency
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
 Input <--- sorted array, searchKey
+
 Output <--- number, the index of the searchKey or -1
 
 Define start set to 0
@@ -29,3 +30,16 @@ Return result
 ## Solution
 <!-- Embedded whiteboard image -->
 ![Whiteboard Image](./assets/binary-search.jpg)
+
+[binary Search pull request](https://github.com/astrokd/data-structures-and-algorithms/pull/33)
+
+ - [x] Top-level README “Table of Contents” is updated
+ - [x] Feature tasks for this challenge are completed
+ - [x] Unit tests written and passing
+     - [x] “Happy Path” - Expected outcome
+     - [x] Expected failure
+     - [ ] Edge Case (if applicable/obvious)
+ - [x] README for this challenge is complete
+     - [x] Summary, Description, Approach & Efficiency, Solution
+     - [x] Link to code
+     - [x] Picture of whiteboard
