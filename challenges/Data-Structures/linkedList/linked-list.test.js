@@ -1,5 +1,5 @@
 // Linked List
-// Solved with the help of: 
+// Solved my testing issue with the help of: 
 // https://github.com/tylersayvetz/data-structures-and-algorithms/blob/linked-list/code-challenges/linked-list/linked-list.test.js
 
 // const LinkedList = require('../linked-list.js');
@@ -13,7 +13,7 @@ class Node {
 }
   
 class LinkedList {
-    constructor(head = null) {
+    constructor(head) {
       this.head = head;
     }
   
@@ -57,6 +57,15 @@ class LinkedList {
   
 }
 
+describe('linked-list instantiate', () => {
+  test('should return the value of head', () => {
+      const headNode = new Node(0,null);
+      const linkedList = new LinkedList(headNode);
+      expect(linkedList.head.value).toEqual(0);
+      expect(linkedList.head.next).toEqual(null);
+  });
+});
+
 describe('linked-list insert', () => {
     test('should insert value into linked-list', () => {
         const headNode = new Node(0,null);
@@ -79,12 +88,13 @@ describe('linked-list includes', () => {
     });
 });
 
-describe('linked-list includes', () => {
+describe('linked-list toString', () => {
     test('should return string of linked list', () => {
         const headNode = new Node(0,null);
         const linkedList = new LinkedList(headNode);
         linkedList.insert(5);
-        linkedList.insert(0);
-        expect(linkedList.toString()).toEqual('{ 0 } -> { 5 } -> NULL');
+        linkedList.insert('string');
+        linkedList.insert(true);
+        expect(linkedList.toString()).toEqual('{ true } -> { string } -> { 5 } -> NULL');
     });
 });
