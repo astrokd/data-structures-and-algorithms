@@ -20,7 +20,8 @@ class LinkedList {
     //Add to head
     insert(value) {
       if (!this.head) {return 'No Head';}
-      const newHead = new Node(value,this.head);
+      const oldHead = this.head;
+      const newHead = new Node(value,oldHead);
       this.head = newHead;
     }
   
@@ -43,10 +44,10 @@ class LinkedList {
     toString() {
     if (!this.head) {return 'No Head';}
     let current = this.head;
-    let str = '';
+    let str = `{ ${current.value} } -> `;
     while(current.next !== null) {
-      str = str + `{ ${current.value} } -> `;
       current = current.next;
+      str = str + `{ ${current.value} } -> `;
     }
     return str + 'NULL';
     }
@@ -88,9 +89,8 @@ describe('linked-list toString', () => {
     test('should return string of linked list', () => {
         const headNode = new Node(0,null);
         const linkedList = new LinkedList(headNode);
-        linkedList.insert(5);
         linkedList.insert('string');
         linkedList.insert(true);
-        expect(linkedList.toString()).toEqual('{ true } -> { string } -> { 5 } -> NULL');
+        expect(linkedList.toString()).toEqual('{ true } -> { string } -> { 0 } -> NULL');
     });
 });

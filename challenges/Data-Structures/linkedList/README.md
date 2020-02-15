@@ -21,14 +21,21 @@ Implement a Linked List
 ## Approach & Efficiency
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
 
-Following the class 
+For insert I inserted the value in a new node and made that the head and made the next the oldhead.
+
+Following the class guide I traversed the list and looped through the list with a while node.next not equal to null.
+
+For includes I checked if the value was equal to each node.value in the list, if it was I returned true.
+
+For toString I created a string and added the head.value, set the node.value for each node until next was equal to null
+
 
 
 ## API
 <!-- Description of each method publicly available to your Linked List -->
 
-- insert
-- includes
+- The insert(value) method inserts a value in the beginning of the list
+- The includes(value) method checks 
 - toString
 
 *With from TA (allister)*
