@@ -3,13 +3,13 @@
 class Node {
     constructor(value, next) {
       this.value = value;
-      this.next = next || null;
+      this.next = next;
     }
 }
   
 class LinkedList {
     constructor(head) {
-      this.head = head || new Node(null, null);
+      this.head = head;
     }
   
     //Add to head
@@ -56,5 +56,5 @@ class LinkedList {
 // instantiate linked list
 // let linkList = new LinkedList(new Node('first',null));
 
-module.exports = Node;
 module.exports = LinkedList;
+module.exports = Node;
