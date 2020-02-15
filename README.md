@@ -1,9 +1,10 @@
 # data-structures-and-algorithms
 CodeFellows 401 Challenges
 
- - [x] Class 01
- - [x] Class 02
- - [x] Class 03
+ - [x] Class 01 : arrayReverse
+ - [x] Class 02 : arrayShift
+ - [x] Class 03 : arrayBinarySearch
+ - [x] Class 05 : linkedList
 
 CodeFellows 301 Code Challenges
 
