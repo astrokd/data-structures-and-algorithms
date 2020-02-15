@@ -14,7 +14,12 @@ Implement a Linked List
 ## Approach & Efficiency
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
 
+
 ## API
 <!-- Description of each method publicly available to your Linked List -->
 
-[Useful link G4G](https://www.geeksforgeeks.org/implementation-linkedlist-javascript/)
+- insert
+- includes
+- toString
+
+*With from TA (allister)*
