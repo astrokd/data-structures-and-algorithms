@@ -23,3 +23,5 @@ Implement a Linked List
 - toString
 
 *With from TA (allister)*
+
+![Whiteboard Image](./assets/linkedlist.jpg)
