@@ -1,23 +1,60 @@
+// Linked List
 
 class Node {
-    constructor(valve, next) {
+    constructor(value, next) {
       this.value = value;
-      this.next = next;
+      this.next = next || null;
     }
-  }
+}
   
-  class LinkedList {
+class LinkedList {
     constructor(head) {
-      this.head = head;
+      this.head = head || new Node(null, null);
     }
   
-    append(node) {
+    //Add to head
+    insert(value) {
+      if (!this.head) {
+          return 'No Head';
+      }
+      const newHead = new Node(value,this.head);
+      this.head = newHead;
+    }
+  
+    //
+    includes(value) {
+      if (!this.head) {
+        return 'No Head';
+      }
       let current = this.head;
-      while(current.next !== null) {
+      let result = false;
+      while(current.value !== value) {
         current = current.next;
       }
-        current.next = node;
+      if (current.value === value) {
+        result = true;
+      }
+      return result;
     }
-  }
   
-  const a = new Node(a, new Node(b,null));
+    //
+    toString() {
+    if (!this.head) {
+      return 'No Head';
+    }
+    let current = this.head;
+    let str = '';
+    while(current.next !== null) {
+      str = str + `{ ${current.value} } -> `;
+      current = current.next;
+    }
+    return str + 'NULL';
+    }
+  
+}
+
+// instantiate linked list
+// let linkList = new LinkedList(new Node('first',null));
+
+module.exports = Node;
+module.exports = LinkedList;
