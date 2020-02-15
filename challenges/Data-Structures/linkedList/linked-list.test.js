@@ -19,9 +19,7 @@ class LinkedList {
   
     //Add to head
     insert(value) {
-      if (!this.head) {
-          return 'No Head';
-      }
+      if (!this.head) {return 'No Head';}
       const newHead = new Node(value,this.head);
       this.head = newHead;
     }
@@ -43,9 +41,7 @@ class LinkedList {
   
     //
     toString() {
-    if (!this.head) {
-      return 'No Head';
-    }
+    if (!this.head) {return 'No Head';}
     let current = this.head;
     let str = '';
     while(current.next !== null) {
