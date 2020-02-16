@@ -30,7 +30,7 @@ Return result
 
 ## Solution
 <!-- Embedded whiteboard image -->
-![Whiteboard Image](./assets/binary-search.jpg)
+![Whiteboard Image](./assets/binary-search.JPG)
 
 [binary Search pull request](https://github.com/astrokd/data-structures-and-algorithms/pull/33)
 
