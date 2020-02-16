@@ -1,10 +1,10 @@
 # data-structures-and-algorithms
 CodeFellows 401 Challenges
 
- - [x] Class 01 : arrayReverse
- - [x] Class 02 : arrayShift
- - [x] Class 03 : arrayBinarySearch
- - [x] Class 05 : linkedList
+ - [x] Class 01 : arrayReverse : [pull request](https://github.com/astrokd/data-structures-and-algorithms/pull/31]
+ - [x] Class 02 : arrayShift : [pull request](https://github.com/astrokd/data-structures-and-algorithms/pull/32]
+ - [x] Class 03 : arrayBinarySearch : [pull request](https://github.com/astrokd/data-structures-and-algorithms/pull/33]
+ - [x] Class 05 : linkedList : [pull request](https://github.com/astrokd/data-structures-and-algorithms/pull/34)
 
 CodeFellows 301 Code Challenges
 
