@@ -36,7 +36,7 @@ For toString I created a string and added the head.value, set the node.value for
 
 - The insert(value) method inserts a value in the beginning of the list
 - The includes(value) method checks 
-- toString
+- toString returns and string of the list values
 
 *With from TA (allister)*
 
