@@ -16,6 +16,14 @@ class LinkedList {
     constructor(head) {
       this.head = head;
     }
+
+    append(node) {
+      let current = this.head;
+      while(current.next !== null) {
+        current = current.next;
+      }
+        current.next = node;
+    }
   
     //Add to head
     insert(value) {
@@ -62,6 +70,18 @@ describe('linked-list instantiate', () => {
       expect(linkedList.head.next).toEqual(null);
   });
 });
+
+// describe('linked-list append', () => {
+//   test('should return the value of appended item', () => {
+//       const one = new Node(1);
+//       const two = new Node(2);
+//       one.next = two;
+//       const ll = new LinkedList(one);
+//       const three = new Node(3);
+//       ll.append(three);
+//       expect(two.next.value).toEqual(three.value);
+//   });
+// });
 
 describe('linked-list insert', () => {
     test('should insert value into linked-list', () => {
