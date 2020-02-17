@@ -8,7 +8,7 @@
 class Node {
     constructor(value, next) {
       this.value = value;
-      this.next = next;
+      this.next = next || null;
     }
 }
   
@@ -71,17 +71,17 @@ describe('linked-list instantiate', () => {
   });
 });
 
-// describe('linked-list append', () => {
-//   test('should return the value of appended item', () => {
-//       const one = new Node(1);
-//       const two = new Node(2);
-//       one.next = two;
-//       const ll = new LinkedList(one);
-//       const three = new Node(3);
-//       ll.append(three);
-//       expect(two.next.value).toEqual(three.value);
-//   });
-// });
+describe('linked-list append', () => {
+  test('should return the value of appended item', () => {
+      const one = new Node(1);
+      const two = new Node(2);
+      one.next = two;
+      const ll = new LinkedList(one);
+      const three = new Node(3);
+      ll.append(three);
+      expect(two.next.value).toEqual(three.value);
+  });
+});
 
 describe('linked-list insert', () => {
     test('should insert value into linked-list', () => {
