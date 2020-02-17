@@ -129,6 +129,8 @@ describe('double linked-list insert', () => {
       const linkedList = new LinkedList(headNode);
       linkedList.insert(5);
       expect(linkedList.head.value).toEqual(5);
+      expect(linkedList.head.next.prev.value).toEqual(5);
       expect(linkedList.head.next.next).toEqual(null);
+      expect(linkedList.head.prev).toEqual(null);
   });
 });
