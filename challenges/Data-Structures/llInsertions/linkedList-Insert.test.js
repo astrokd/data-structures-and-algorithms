@@ -13,6 +13,7 @@ class LinkedList {
       this.head = head;
     }
 
+    // Append to tail
     append(node) {
       let current = this.head;
       while(current.next !== null) {
@@ -22,7 +23,7 @@ class LinkedList {
         node.prev = current;
     }
   
-    //Add to head
+    // Add to head
     insert(value) {
       if (!this.head) {return 'No Head';}
       const oldHead = this.head;
@@ -31,7 +32,7 @@ class LinkedList {
       this.head = newHead;
     }
   
-    //
+    // includes
     includes(value) {
       if (!this.head) {return 'No Head';}
       let current = this.head;
@@ -46,16 +47,50 @@ class LinkedList {
       return result;
     }
   
-    //
+    // convert list values to string
     toString() {
-    if (!this.head) {return 'No Head';}
-    let current = this.head;
-    let str = `{ ${current.value} } -> `;
-    while(current.next !== null) {
-      current = current.next;
-      str = str + `{ ${current.value} } -> `;
+      if (!this.head) {return 'No Head';}
+      let current = this.head;
+      let str = `{ ${current.value} } -> `;
+      while(current.next !== null) {
+        current = current.next;
+        str = str + `{ ${current.value} } -> `;
+      }
+      return str + 'NULL';
     }
-    return str + 'NULL';
+
+    // insert before
+    insertBefore(value, newValue) {
+      if (!this.head) {return 'No Head';}
+      let current = this.head;
+      const newNode = new Node(newValue);
+      while(current.next !== null) {
+        if(current.value === value) {
+          const previousNode = current.prev;
+          current.prev.next = newNode; //assign the previous nodes next to newNode
+          newNode.next = current;
+          current.prev = newNode;
+          newNode.prev = previousNode;
+        }
+        current = current.next;
+      }
+    }
+
+    // insert after
+    insertAfter(value, newValue) {
+      if (!this.head) {return 'No Head';}
+      let current = this.head;
+      const newNode = new Node(newValue);
+      while(current.next !== null) {
+        if(current.value === value) {
+          const nextNode = current.next
+          current.next = newNode;
+          newNode.prev = current;
+          newNode.next = nextNode;
+          nextNode.prev = newNode;
+        }
+        current = current.next;
+      }
     }
   
 }
@@ -131,7 +166,7 @@ describe('double linked-list insert', () => {
 
 // -- Linked List Insertions
 
-describe('linked-list append', () => {
+describe('linked-list append 2 nodes', () => {
   test('should return the value of appended items', () => {
       const one = new Node(1);
       const two = new Node(2);
@@ -143,5 +178,35 @@ describe('linked-list append', () => {
       ll.append(four);
       expect(two.next.value).toEqual(three.value);
       expect(three.next.value).toEqual(four.value);
+  });
+});
+
+describe('linked-list insert before', () => {
+  test('should return the value of inserted items', () => {
+      const one = new Node(1);
+      const two = new Node(2);
+      const three = new Node(3);
+      one.next = two;
+      two.prev = one;
+      two.next = three;
+      three.prev = two;
+      const ll = new LinkedList(one);
+      ll.insertBefore(2,5);
+      expect(one.next.value).toEqual(5);
+  });
+});
+
+describe('linked-list insert after', () => {
+  test('should return the value of inserted items', () => {
+      const one = new Node(1);
+      const two = new Node(2);
+      const three = new Node(3);
+      one.next = two;
+      two.prev = one;
+      two.next = three;
+      three.prev = two;
+      const ll = new LinkedList(one);
+      ll.insertAfter(2,5);
+      expect(two.next.value).toEqual(5);
   });
 });
