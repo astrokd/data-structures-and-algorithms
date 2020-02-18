@@ -1,14 +1,10 @@
 // Linked List
-// Solved my testing issue with the help of: 
-// https://github.com/tylersayvetz/data-structures-and-algorithms/blob/linked-list/code-challenges/linked-list/linked-list.test.js
-
-// const LinkedList = require('../linked-list.js');
-// const Node = require('../linked-list.js');
 
 class Node {
-    constructor(value, next) {
+    constructor(value, next, prev) {
       this.value = value;
-      this.next = next;
+      this.next = next || null;
+      this.prev = prev || null;
     }
 }
   
@@ -16,12 +12,22 @@ class LinkedList {
     constructor(head) {
       this.head = head;
     }
+
+    append(node) {
+      let current = this.head;
+      while(current.next !== null) {
+        current = current.next;
+      }
+        current.next = node;
+        node.prev = current;
+    }
   
     //Add to head
     insert(value) {
       if (!this.head) {return 'No Head';}
       const oldHead = this.head;
       const newHead = new Node(value,oldHead);
+      oldHead.prev = newHead;
       this.head = newHead;
     }
   
@@ -56,16 +62,28 @@ class LinkedList {
 
 describe('linked-list instantiate', () => {
   test('should return the value of head', () => {
-      const headNode = new Node(0,null);
+      const headNode = new Node(0);
       const linkedList = new LinkedList(headNode);
       expect(linkedList.head.value).toEqual(0);
       expect(linkedList.head.next).toEqual(null);
   });
 });
 
+describe('linked-list append', () => {
+  test('should return the value of appended item', () => {
+      const one = new Node(1);
+      const two = new Node(2);
+      one.next = two;
+      const ll = new LinkedList(one);
+      const three = new Node(3);
+      ll.append(three);
+      expect(two.next.value).toEqual(three.value);
+  });
+});
+
 describe('linked-list insert', () => {
     test('should insert value into linked-list', () => {
-        const headNode = new Node(0,null);
+        const headNode = new Node(0);
         const linkedList = new LinkedList(headNode);
         linkedList.insert(5);
         expect(linkedList.head.value).toEqual(5);
@@ -75,7 +93,7 @@ describe('linked-list insert', () => {
 
 describe('linked-list includes', () => {
     test('should return boolean of value if it exist in list', () => {
-        const headNode = new Node(0,null);
+        const headNode = new Node(0);
         const linkedList = new LinkedList(headNode);
         linkedList.insert(5);
         linkedList.insert(4);
@@ -93,4 +111,26 @@ describe('linked-list toString', () => {
         linkedList.insert(true);
         expect(linkedList.toString()).toEqual('{ true } -> { string } -> { 0 } -> NULL');
     });
+});
+
+describe('doubly linked-list instantiate', () => {
+  test('should return the value of head, next, and prev', () => {
+      const headNode = new Node(2);
+      const dLL = new LinkedList(headNode);
+      expect(dLL.head.value).toEqual(2);
+      expect(dLL.head.next).toEqual(null);
+      expect(dLL.head.prev).toEqual(null);
+  });
+});
+
+describe('double linked-list insert', () => {
+  test('should insert value into linked-list', () => {
+      const headNode = new Node(0);
+      const linkedList = new LinkedList(headNode);
+      linkedList.insert(5);
+      expect(linkedList.head.value).toEqual(5);
+      expect(linkedList.head.next.prev.value).toEqual(5);
+      expect(linkedList.head.next.next).toEqual(null);
+      expect(linkedList.head.prev).toEqual(null);
+  });
 });
