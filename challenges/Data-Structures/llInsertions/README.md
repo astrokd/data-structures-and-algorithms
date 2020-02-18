@@ -8,7 +8,7 @@ Implement a Linked List that appends to the list and inserts before and after a 
 - [ ] insert before a value
 - [ ] insert after a value
 - [ ] Testing
-  - [ ] Can successfully add a node to the end of the linked list
+  - [x] Can successfully add a node to the end of the linked list
   - [ ] Can successfully add multiple nodes to the end of a linked list
   - [ ] Can successfully insert a node before a node located i the middle of a linked list
   - [ ] Can successfully insert a node before the first node of a linked list

@@ -60,24 +60,16 @@ class LinkedList {
   
 }
 
+// -- TESTS ----------------------------------------------------
+
+// -- Singly Linked List
+
 describe('linked-list instantiate', () => {
   test('should return the value of head', () => {
       const headNode = new Node(0);
       const linkedList = new LinkedList(headNode);
       expect(linkedList.head.value).toEqual(0);
       expect(linkedList.head.next).toEqual(null);
-  });
-});
-
-describe('linked-list append', () => {
-  test('should return the value of appended item', () => {
-      const one = new Node(1);
-      const two = new Node(2);
-      one.next = two;
-      const ll = new LinkedList(one);
-      const three = new Node(3);
-      ll.append(three);
-      expect(two.next.value).toEqual(three.value);
   });
 });
 
@@ -113,6 +105,8 @@ describe('linked-list toString', () => {
     });
 });
 
+// -- Doubly Linked List
+
 describe('doubly linked-list instantiate', () => {
   test('should return the value of head, next, and prev', () => {
       const headNode = new Node(2);
@@ -132,5 +126,22 @@ describe('double linked-list insert', () => {
       expect(linkedList.head.next.prev.value).toEqual(5);
       expect(linkedList.head.next.next).toEqual(null);
       expect(linkedList.head.prev).toEqual(null);
+  });
+});
+
+// -- Linked List Insertions
+
+describe('linked-list append', () => {
+  test('should return the value of appended items', () => {
+      const one = new Node(1);
+      const two = new Node(2);
+      one.next = two;
+      const ll = new LinkedList(one);
+      const three = new Node(3);
+      const four = new Node(4);
+      ll.append(three);
+      ll.append(four);
+      expect(two.next.value).toEqual(three.value);
+      expect(three.next.value).toEqual(four.value);
   });
 });
