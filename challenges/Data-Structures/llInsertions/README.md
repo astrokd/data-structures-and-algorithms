@@ -30,4 +30,4 @@ The insert after value method will create a new node,traverse the list until it 
 
 
 
-![Whiteboard Image](./assets/linkedlist.jpg)
+![Whiteboard Image](./assets/linkedlistInsert.jpg)
