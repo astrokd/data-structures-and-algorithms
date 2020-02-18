@@ -5,14 +5,14 @@ Implement a Linked List that appends to the list and inserts before and after a 
 ## Challenge
 <!-- Description of the challenge -->
 - [x] append to the end of the list
-- [ ] insert before a value
-- [ ] insert after a value
-- [ ] Testing
+- [x] insert before a value
+- [x] insert after a value
+- [x] Testing
   - [x] Can successfully add a node to the end of the linked list
-  - [ ] Can successfully add multiple nodes to the end of a linked list
-  - [ ] Can successfully insert a node before a node located i the middle of a linked list
+  - [x] Can successfully add multiple nodes to the end of a linked list
+  - [x] Can successfully insert a node before a node located in the middle of a linked list
   - [ ] Can successfully insert a node before the first node of a linked list
-  - [ ] Can successfully insert after a node in the middle of the linked list
+  - [x] Can successfully insert after a node in the middle of the linked list
   - [ ] Can successfully insert a node after the last node of the linked list
 
 ## Approach & Efficiency
