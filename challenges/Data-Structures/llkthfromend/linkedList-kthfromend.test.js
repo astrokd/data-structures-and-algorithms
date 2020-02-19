@@ -114,15 +114,19 @@ class LinkedList {
     kthFromEnd(k) {
       if (!this.head) {return 'No Head';}
       let current = this.head;
-      let llCount = 0
+      let llCount = 0;
       while(current.next !== null) {
         llCount++;
         current = current.next;
       }
       let count = 0;
       current = this.head;
-      while(count < llCount) {
+      while(current.next !== null) {
+        if (count === llCount-k) {
+          return current.value;
+        }
         current = current.next;
+        count++;
       }
       return current.value;
     }
