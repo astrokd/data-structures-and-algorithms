@@ -8,7 +8,7 @@ Write a method that takes a number and returns the value of the node that number
 - [x] insert before a value
 - [x] insert after a value
 - [x] Testing
-  - [x] Can successfully add a node to the end of the linked list
+  - [x] Can successfully ad d a node to the end of the linked list
   - [x] Can successfully add multiple nodes to the end of a linked list
   - [x] Can successfully insert a node before a node located in the middle of a linked list
   - [x] Can successfully insert a node before the first node of a linked list

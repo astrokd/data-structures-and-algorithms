@@ -109,110 +109,40 @@ class LinkedList {
         current = current.next;
       }
     }
+
+    //get kth from end
+    kthFromEnd(k) {
+      if (!this.head) {return 'No Head';}
+      let current = this.head;
+      let llCount = 0
+      while(current.next !== null) {
+        llCount++;
+        current = current.next;
+      }
+      let count = 0;
+      current = this.head;
+      while(count < llCount) {
+        current = current.next;
+      }
+      return current.value;
+    }
   
 }
 
 // -- TESTS ----------------------------------------------------
 
-// -- Doubly Linked List
+// -- Linked List kthFromEnd
 
-describe('doubly linked-list instantiate', () => {
-  test('should return the value of head, next, and prev', () => {
-      const headNode = new Node(2);
-      const dLL = new LinkedList(headNode);
-      expect(dLL.head.value).toEqual(2);
-      expect(dLL.head.next).toEqual(null);
-      expect(dLL.head.prev).toEqual(null);
-  });
-});
-
-describe('double linked-list insert', () => {
-  test('should insert value into linked-list', () => {
-      const headNode = new Node(0);
-      const linkedList = new LinkedList(headNode);
-      linkedList.insert(5);
-      expect(linkedList.head.value).toEqual(5);
-      expect(linkedList.head.next.prev.value).toEqual(5);
-      expect(linkedList.head.next.next).toEqual(null);
-      expect(linkedList.head.prev).toEqual(null);
-  });
-});
-
-// -- Linked List Insertions
-
-describe('linked-list append 2 nodes', () => {
-  test('should return the value of appended items', () => {
-      const one = new Node(1);
-      const two = new Node(2);
-      one.next = two;
-      const ll = new LinkedList(one);
-      const three = new Node(3);
-      const four = new Node(4);
-      ll.append(three);
-      ll.append(four);
-      expect(two.next.value).toEqual(three.value);
-      expect(three.next.value).toEqual(four.value);
-  });
-});
-
-describe('linked-list insert before', () => {
-  test('should return the value of inserted items', () => {
-      const one = new Node(1);
-      const two = new Node(2);
-      const three = new Node(3);
+describe('linked-list kth from end', () => {
+  test('should return value of the kth from end in list', () => {
+      const one = new Node(5);
+      const two = new Node(6);
+      const three = new Node(7);
       one.next = two;
       two.prev = one;
       two.next = three;
       three.prev = two;
       const ll = new LinkedList(one);
-      ll.insertBefore(2,5);
-      expect(one.next.value).toEqual(5);
-  });
-});
-
-describe('linked-list insert before the first node of a linked list', () => {
-  test('should return the value of inserted items', () => {
-      const one = new Node(1);
-      const two = new Node(2);
-      const three = new Node(3);
-      one.next = two;
-      two.prev = one;
-      two.next = three;
-      three.prev = two;
-      const ll = new LinkedList(one);
-      ll.insertBefore(1,5);
-      expect(ll.head.value).toEqual(5);
-  });
-});
-
-describe('linked-list insert after', () => {
-  test('should return the value of inserted items', () => {
-      const one = new Node(1);
-      const two = new Node(2);
-      const three = new Node(3);
-      one.next = two;
-      two.prev = one;
-      two.next = three;
-      three.prev = two;
-      const ll = new LinkedList(one);
-      ll.insertAfter(2,5);
-      expect(two.next.value).toEqual(5);
-  });
-});
-
-describe('linked-list insert after the last node in a linked list', () => {
-  test('should return the value of inserted items', () => {
-      const one = new Node(1);
-      const two = new Node(2);
-      const three = new Node(3);
-      one.next = two;
-      two.prev = one;
-      two.next = three;
-      three.prev = two;
-      const ll = new LinkedList(one);
-      // console.log('toString()',ll.toString());
-      ll.insertAfter(3,5);
-      // console.log('toString()',ll.toString());
-      expect(three.next.value).toEqual(5);
+      expect(ll.kthFromEnd(1)).toEqual(6);
   });
 });
