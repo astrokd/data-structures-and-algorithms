@@ -137,25 +137,21 @@ class LinkedList {
 function mergeLists(list1,list2) {
   let cur1 = list1.head;
   let cur2 = list2.head;
-  let ll = new LinkedList(cur1);
-  let current = ll.head;
-  let count = 0;
+  let ll = new LinkedList(new Node(cur1.value));
   cur1 = cur1.next;
-  cur2 = cur2.next;
-  while(!cur1.next && !cur2.next) {
-    if(count%2 === 0 || cur2.next === null) {
-      // cur2.next = null;
-      current.next = cur2;
+  let count = 0;
+  while(cur1.next || cur2.next) {
+    if(count%2 === 0) {
+      console.log('count even',count);
+      ll.append(new Node(cur2.value))
       cur2 = cur2.next;
     } 
-    if(count%2 === 1 || cur1.next === null) {
-      // cur1.next = null;
-      current.next = cur1;
+    if(count%2 === 1) {
+      console.log('count odd',count);
+      ll.append(new Node(cur1.value))
       cur1 = cur1.next;
     }
     count++;
-    // console.log('count',count);
-    current = current.next;
   }
   return ll;
 }
