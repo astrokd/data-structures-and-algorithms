@@ -9,7 +9,7 @@ class Node {
 }
   
 class LinkedList {
-    constructor(head) {
+    constructor(head = null) {
       this.head = head;
     }
 
@@ -133,20 +133,81 @@ class LinkedList {
   
 }
 
+//merge list
+function mergeLists(list1,list2) {
+  let cur1 = list1.head;
+  let cur2 = list2.head;
+  let ll = new LinkedList(new Node(cur1.value));
+  cur1 = cur1.next;
+  let count = 0;
+  while(cur1 || cur2) {
+    if(count%2 === 0 && cur2) {
+      ll.append(new Node(cur2.value))
+      cur2 = cur2.next;
+    } 
+    if(count%2 === 1 && cur1) {
+      ll.append(new Node(cur1.value))
+      cur1 = cur1.next;
+    }
+    count++;
+  }
+  return ll;
+}
+
+
 // -- TESTS ----------------------------------------------------
 
 // -- Linked List kthFromEnd
 
-describe('linked-list kth from end', () => {
-  test('should return value of the kth from end in list', () => {
-      const one = new Node(5);
-      const two = new Node(6);
-      const three = new Node(7);
-      one.next = two;
-      two.prev = one;
-      two.next = three;
-      three.prev = two;
-      const ll = new LinkedList(one);
-      expect(ll.kthFromEnd(1)).toEqual(6);
+describe('linked-list merge list', () => {
+  test('ll1 and ll2 equal length zipped together', () => {
+      const one1 = new Node(1);
+      const two1 = new Node(3);
+      const three1 = new Node(2);
+      one1.next = two1;
+      two1.next = three1;
+      const ll1 = new LinkedList(one1);
+      const one2 = new Node(5);
+      const two2 = new Node(9);
+      const three2 = new Node(4);
+      one2.next = two2;
+      two2.next = three2;
+      const ll2 = new LinkedList(one2);
+      const llMerged = mergeLists(ll1,ll2);
+      const result = '{ 1 } -> { 5 } -> { 3 } -> { 9 } -> { 2 } -> { 4 } -> NULL'
+      expect(llMerged).toBeInstanceOf(LinkedList);
+      expect(llMerged.toString()).toBe(result);
+  });
+  test('ll1 length shorter than ll2 zipped together', () => {
+    const one1 = new Node(1);
+    const two1 = new Node(3);
+    one1.next = two1;
+    const ll1 = new LinkedList(one1);
+    const one2 = new Node(5);
+    const two2 = new Node(9);
+    const three2 = new Node(4);
+    one2.next = two2;
+    two2.next = three2;
+    const ll2 = new LinkedList(one2);
+    const llMerged = mergeLists(ll1,ll2);
+    const result = '{ 1 } -> { 5 } -> { 3 } -> { 9 } -> { 4 } -> NULL'
+    expect(llMerged).toBeInstanceOf(LinkedList);
+    expect(llMerged.toString()).toBe(result);
+  });
+  test('ll1 length longer than ll2 zipped together', () => {
+    const one1 = new Node(1);
+    const two1 = new Node(3);
+    const three1 = new Node(2);
+    one1.next = two1;
+    two1.next = three1;
+    const ll1 = new LinkedList(one1);
+    const one2 = new Node(5);
+    const two2 = new Node(9);
+    one2.next = two2;
+    const ll2 = new LinkedList(one2);
+    const llMerged = mergeLists(ll1,ll2);
+    const result = '{ 1 } -> { 5 } -> { 3 } -> { 9 } -> { 2 } -> NULL'
+    expect(llMerged).toBeInstanceOf(LinkedList);
+    expect(llMerged.toString()).toBe(result);
   });
 });

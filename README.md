@@ -5,6 +5,12 @@ CodeFellows 401 Challenges
  - [x] Class 02 : arrayShift : [pull request update](https://github.com/astrokd/data-structures-and-algorithms/pull/32) : [README](https://github.com/astrokd/data-structures-and-algorithms/blob/master/challenges/arrayShift/README.md)
  - [x] Class 03 : arrayBinarySearch : [pull request](https://github.com/astrokd/data-structures-and-algorithms/pull/33) : [README](https://github.com/astrokd/data-structures-and-algorithms/blob/master/challenges/arrayBinarySearch/README.md)
  - [x] Class 05 : linkedList : [pull request](https://github.com/astrokd/data-structures-and-algorithms/pull/34) : [README](https://github.com/astrokd/data-structures-and-algorithms/blob/linked-list/challenges/Data-Structures/linkedList/README.md)
- - [ ] Class 06 : ??? : [pull request] : [README]
- - [ ] Class 07 : ??? : [pull request] : [README]
- - [ ] Class 08 : ??? : [pull request] : [README]
+ - [x] Class 06 : ll Insertions : [pull request](https://github.com/astrokd/data-structures-and-algorithms/pull/36) : [README](https://github.com/astrokd/data-structures-and-algorithms/blob/master/challenges/Data-Structures/llInsertions/README.md)
+ - [x] Class 07 : kth From End : [pull request](https://github.com/astrokd/data-structures-and-algorithms/pull/37) : [README](https://github.com/astrokd/data-structures-and-algorithms/blob/master/challenges/Data-Structures/llkthfromend/README.md)
+ - [x] Class 08 : ll Merge : [pull request](https://github.com/astrokd/data-structures-and-algorithms/pull/38) : [README](https://github.com/astrokd/data-structures-and-algorithms/blob/master/challenges/Data-Structures/llMerge/README.md)
+ - [ ] Class 0X : ??? : [pull request] : [README]
+ - [ ] Class 0X : ??? : [pull request] : [README]
+ - [ ] Class 0X : ??? : [pull request] : [README]
+ - [ ] Class 0X : ??? : [pull request] : [README]
+ - [ ] Class 0X : ??? : [pull request] : [README]
+ - [ ] Class 0X : ??? : [pull request] : [README]
