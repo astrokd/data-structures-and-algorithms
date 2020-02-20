@@ -9,7 +9,7 @@ class Node {
 }
   
 class LinkedList {
-    constructor(head) {
+    constructor(head = null) {
       this.head = head;
     }
 
@@ -133,12 +133,19 @@ class LinkedList {
   
 }
 
+//merge list
+function mergeLists(list1,list2) {
+  let ll = new LinkedList();
+
+}
+
+
 // -- TESTS ----------------------------------------------------
 
 // -- Linked List kthFromEnd
 
-describe('linked-list kth from end', () => {
-  test('should return value of the kth from end in list', () => {
+describe('linked-list merge list', () => {
+  test('should return a linked list of the two list zipped together', () => {
       const one = new Node(5);
       const two = new Node(6);
       const three = new Node(7);
