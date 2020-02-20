@@ -140,14 +140,12 @@ function mergeLists(list1,list2) {
   let ll = new LinkedList(new Node(cur1.value));
   cur1 = cur1.next;
   let count = 0;
-  while(cur1.next || cur2.next) {
+  while(cur1 || cur2) {
     if(count%2 === 0) {
-      console.log('count even',count);
       ll.append(new Node(cur2.value))
       cur2 = cur2.next;
     } 
     if(count%2 === 1) {
-      console.log('count odd',count);
       ll.append(new Node(cur1.value))
       cur1 = cur1.next;
     }
@@ -176,9 +174,8 @@ describe('linked-list merge list', () => {
       two2.next = three2;
       const ll2 = new LinkedList(one2);
       const llMerged = mergeLists(ll1,ll2);
-      console.log('ll1',ll1.toString());
-      console.log('ll2',ll2.toString());
-      console.log('llMerged',llMerged.toString());
-      expect(mergeLists(ll1,ll2)).toBeInstanceOf(LinkedList);
+      const result = '{ 1 } -> { 5 } -> { 3 } -> { 9 } -> { 2 } -> { 4 } -> NULL'
+      expect(llMerged).toBeInstanceOf(LinkedList);
+      expect(llMerged.toString()).toBe(result);
   });
 });
