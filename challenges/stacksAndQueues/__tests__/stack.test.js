@@ -76,7 +76,7 @@ describe('instantiate empty stack', () => {
         expect(testStack.storage.length).toEqual(0);
         expect(testStack.storage.length).toEqual(0);
     })
-    it('isEmpty() also returns amptiness ', () => {
+    it('isEmpty() also returns emptiness ', () => {
         expect(testStack.isEmpty()).toEqual(true);
     })
 })
