@@ -55,5 +55,16 @@ describe('pop off top of stack until stack is empty', () => {
 })
 
 // peek next item on stack
+describe('peek top item on stack', () => {
+    const testStack = new Stack;
+    it('returns current next item in stack ', () => {
+        expect(testStack.peek()).toEqual(null);
+        testArr = ['1','2','3'];
+        testStack.top = testArr[0];
+        testStack.storage = testArr;
+        expect(testStack.peek()).toEqual('1');
+    })
+})
+
 
 // instantiate an empty stack

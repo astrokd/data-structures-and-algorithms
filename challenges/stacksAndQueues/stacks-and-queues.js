@@ -32,6 +32,10 @@ class Stack {
     }
 
     //peek
+    peek() {
+        return this.top;
+    }
+
     //isEmpty
 
 }
