@@ -23,9 +23,10 @@ class Stack {
     pop() {
         if (this.storage.length) {
             let popped = this.storage.shift();
-            this.top = this.storage[0];
+            this.top = this.storage[0] ? this.storage[0] : null;
             return popped;
         } else {
+            this.top = null;
             return null;
         }
     }
