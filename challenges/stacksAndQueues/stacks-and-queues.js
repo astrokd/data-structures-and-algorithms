@@ -10,10 +10,26 @@ class Node {
 class Stack {
     constructor() {
         this.top = null;
+        this.storage = [];
     }
 
     //push
+    push(value) {
+        this.top = value;
+        return this.storage.unshift(value);
+    }
+
     //pop
+    pop() {
+        if (this.storage.length) {
+            let popped = this.storage.shift();
+            this.top = this.storage[0];
+            return popped;
+        } else {
+            return null;
+        }
+    }
+
     //peek
     //isEmpty
 
@@ -23,6 +39,7 @@ class Stack {
 class Queue {
     constructor() {
         this.front = null;
+        this.storage = [];
     }
 
     //enqueue
