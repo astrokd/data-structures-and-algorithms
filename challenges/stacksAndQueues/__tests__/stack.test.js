@@ -70,9 +70,13 @@ describe('peek top item on stack', () => {
 // instantiate an empty stack
 describe('instantiate empty stack', () => {
     const testStack = new Stack;
-    it('returns current next item in stack ', () => {
+    it('returns its emptiness  ', () => {
         expect(testStack.top).toEqual(null);
         expect(testStack.storage[0]).toBeUndefined();
         expect(testStack.storage.length).toEqual(0);
+        expect(testStack.storage.length).toEqual(0);
+    })
+    it('isEmpty() also returns amptiness ', () => {
+        expect(testStack.isEmpty()).toEqual(true);
     })
 })
