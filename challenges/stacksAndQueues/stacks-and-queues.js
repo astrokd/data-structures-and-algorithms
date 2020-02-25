@@ -1,24 +1,18 @@
-//Node class
-class Node {
-    constructor(value, next = null) {
-        this.value = value;
-        this.next = next;
-    }
-}
-
-// const {LinkedList} = require('/linked-lists')
+const {
+    LinkedList,
+    Node } = require('./linked-lists')
 
 //Stack class
 class Stack {
     constructor() {
         this.top = null;
-        this.storage = [];
+        this.storage = new LinkedList(this.top);
     }
 
     //push
     push(value) {
-        this.top = value;
-        return this.storage.unshift(value);
+        this.storage.insert(value);
+        this.top = this.storage.head;
     }
 
     //pop
