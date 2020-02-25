@@ -40,6 +40,16 @@ describe('dequeue from front of queue', () => {
 })
 
 // peek into a queue
+describe('peek front item in queue', () => {
+    const testQueue = new Queue;
+    it('returns front of queue ', () => {
+        expect(testQueue.peek()).toEqual(null);
+        testArr = ['1','2','3'];
+        testQueue.front = testArr[0];
+        testQueue.storage = testArr;
+        expect(testQueue.peek()).toEqual('1');
+    })
+})
 
 // empty a queue with multiple dequeues
 

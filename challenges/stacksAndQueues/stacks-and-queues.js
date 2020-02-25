@@ -67,6 +67,10 @@ class Queue {
     }
 
     //peek
+    peek() {
+        return this.front;
+    }
+
     //isEmpty
 }
 
