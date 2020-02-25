@@ -49,27 +49,36 @@ describe('pop off top stack', () => {
 // empty stack with multiple pops
 describe('pop off top of stack until stack is empty', () => {
     const testStack = new Stack;
-    xit('empty stack ', () => {
-        testArr = ['a','b','c'];
-        testStack.top = testArr[0];
-        testStack.storage = testArr;
+    it('empty stack ', () => {
+        const a = new Node('a');
+        const b = new Node('b');
+        const c = new Node('c');
+        a.next = b;
+        b.next = c;
+        testStack.top = a;
+        ll = new LinkedList(a);
+        testStack.storage = ll;
         expect(testStack.pop()).toEqual('a');
         expect(testStack.pop()).toEqual('b');
         expect(testStack.pop()).toEqual('c');
         expect(testStack.top).toEqual(null);
-        expect(testStack.storage.length).toEqual(0);
     })
 })
 
 // peek next item on stack
 describe('peek top item on stack', () => {
     const testStack = new Stack;
-    xit('returns current next item in stack ', () => {
+    it('returns current next item in stack ', () => {
         expect(testStack.peek()).toEqual(null);
-        testArr = ['1','2','3'];
-        testStack.top = testArr[0];
-        testStack.storage = testArr;
-        expect(testStack.peek()).toEqual('1');
+        const a = new Node('1');
+        const b = new Node('2');
+        const c = new Node('3');
+        a.next = b;
+        b.next = c;
+        testStack.top = a;
+        ll = new LinkedList(a);
+        testStack.storage = ll;
+        expect(testStack.peek()).toBe(a);
     })
 })
 
@@ -77,12 +86,11 @@ describe('peek top item on stack', () => {
 // instantiate an empty stack
 describe('instantiate empty stack', () => {
     const testStack = new Stack;
-    xit('returns its emptiness  ', () => {
+    it('returns its emptiness  ', () => {
         expect(testStack.top).toEqual(null);
-        expect(testStack.storage[0]).toBeUndefined();
-        expect(testStack.storage.length).toEqual(0);
+        expect(testStack.storage.head).toEqual(null);
     })
-    xit('isEmpty() also returns emptiness ', () => {
+    it('isEmpty() also returns emptiness ', () => {
         expect(testStack.isEmpty()).toEqual(true);
     })
 })

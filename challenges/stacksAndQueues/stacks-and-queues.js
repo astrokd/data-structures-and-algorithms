@@ -33,7 +33,7 @@ class Stack {
 
     //isEmpty
     isEmpty() {
-        return this.storage.length ? false : true;
+        return this.storage.head ? false : true;
     }
 
 }
