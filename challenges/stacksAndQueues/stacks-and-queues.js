@@ -1,6 +1,4 @@
-const {
-    LinkedList,
-    Node } = require('./linked-lists')
+const {LinkedList} = require('./linked-lists')
 
 //Stack class
 class Stack {
@@ -17,9 +15,10 @@ class Stack {
 
     //pop
     pop() {
-        if (this.storage.length) {
-            let popped = this.storage.shift();
-            this.top = this.storage[0] ? this.storage[0] : null;
+        if (this.storage.head !== null) {
+            let popped = this.storage.head.value;
+            this.storage.head = this.storage.head.next;
+            this.top = this.storage.head !== null ? this.storage.head : null;
             return popped;
         } else {
             this.top = null;

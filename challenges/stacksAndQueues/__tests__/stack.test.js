@@ -1,4 +1,7 @@
 const {Stack} = require('../stacks-and-queues');
+const { Node,
+        LinkedList 
+        } = require('../linked-lists');
 
 // -- Stacks ------------------------------
 // push onto a stack
@@ -27,14 +30,19 @@ describe('push multiple onto a stack', () => {
 // pop off a stack
 describe('pop off top stack', () => {
     const testStack = new Stack;
-    xit('remove values from stack with pop ', () => {
-        testArr = ['a','b','c'];
-        testStack.top = testArr[0];
-        testStack.storage = testArr;
+    it('remove values from stack with pop ', () => {
+        const a = new Node('a');
+        const b = new Node('b');
+        const c = new Node('c');
+        a.next = b;
+        b.next = c;
+        testStack.top = a;
+        ll = new LinkedList(a);
+        testStack.storage = ll;
         expect(testStack.pop()).toEqual('a');
-        expect(testStack.top).toEqual('b');
-        expect(testStack.storage.length).toEqual(2);
-        expect(testStack.storage).toEqual(['b','c']);
+        expect(testStack.top).toBe(b);
+        expect(testStack.storage.head.value).toEqual('b');
+        expect(testStack.storage.head).toBe(b);
     })
 })
 
