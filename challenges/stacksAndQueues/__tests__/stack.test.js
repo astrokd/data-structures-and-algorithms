@@ -15,13 +15,12 @@ describe('push onto a stack', () => {
 // push multiple values onto stack
 describe('push multiple onto a stack', () => {
     const testStack = new Stack;
-    xit('add new values to top of stack with push ', () => {
+    it('add new values to top of stack with push ', () => {
         testStack.push('x');
         testStack.push('y');
         testStack.push('z');
-        expect(testStack.storage[0]).toEqual('z');
-        expect(testStack.top).toEqual('z');
-        expect(testStack.storage.length).toEqual(3);
+        expect(testStack.storage.head.value).toEqual('z');
+        expect(testStack.top.value).toEqual('z');
     })
 })
 
