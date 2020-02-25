@@ -61,7 +61,11 @@ class Queue {
         if (this.front === null) {
             return null;
         } else {
-            this.front = this.storage[1];
+            if (this.storage[1] === undefined) {
+                this.front = null;
+            } else {
+                this.front = this.storage[1];
+            }
             return this.storage.shift();
         }
     }

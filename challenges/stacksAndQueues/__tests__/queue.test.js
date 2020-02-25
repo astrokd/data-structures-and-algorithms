@@ -52,5 +52,18 @@ describe('peek front item in queue', () => {
 })
 
 // empty a queue with multiple dequeues
+describe('dequeue queue until Queue is empty', () => {
+    const testQueue = new Queue;
+    it('empty Queue ', () => {
+        testArr = ['a','b','c'];
+        testQueue.front = testArr[0];
+        testQueue.storage = testArr;
+        expect(testQueue.dequeue()).toEqual('a');
+        expect(testQueue.dequeue()).toEqual('b');
+        expect(testQueue.dequeue()).toEqual('c');
+        expect(testQueue.front).toEqual(null);
+        expect(testQueue.storage.length).toEqual(0);
+    })
+})
 
 // instantiate an empty queue
