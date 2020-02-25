@@ -1,4 +1,12 @@
 //Node class
+class Node {
+    constructor(value, next = null) {
+        this.value = value;
+        this.next = next;
+    }
+}
+
+// const {LinkedList} = require('/linked-lists')
 
 //Stack class
 class Stack {

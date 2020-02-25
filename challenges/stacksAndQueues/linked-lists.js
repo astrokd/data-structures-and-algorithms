@@ -10,7 +10,19 @@ class LinkedList {
       this.head = head;
     }
 
-    
+    append(node) {
+        let current = this.head;
+        while(current.next !== null) {
+            current = current.next;
+        }
+        current.next = node;
+    }
+
+    insert(value) {
+        const newHead = new Node(value, this.head);
+        this.head = newHead;
+    }
+
 }
 
 module.exports = {
