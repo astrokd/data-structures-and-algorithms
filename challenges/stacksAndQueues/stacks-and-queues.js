@@ -76,6 +76,9 @@ class Queue {
     }
 
     //isEmpty
+    isEmpty() {
+        return this.storage.length ? false : true;
+    }
 }
 
 module.exports = {

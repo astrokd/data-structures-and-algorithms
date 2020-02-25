@@ -67,3 +67,14 @@ describe('dequeue queue until Queue is empty', () => {
 })
 
 // instantiate an empty queue
+describe('instantiate empty queue', () => {
+    const testQueue = new Queue;
+    it('returns its emptiness  ', () => {
+        expect(testQueue.front).toEqual(null);
+        expect(testQueue.storage[0]).toBeUndefined();
+        expect(testQueue.storage.length).toEqual(0);
+    })
+    it('isEmpty() also returns emptiness ', () => {
+        expect(testQueue.isEmpty()).toEqual(true);
+    })
+})
