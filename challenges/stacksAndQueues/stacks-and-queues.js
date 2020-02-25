@@ -52,11 +52,20 @@ class Queue {
 
     //enqueue
     enqueue(value) {
-        !this.front ? this.front = value : this.front = null
+        if (this.front === null) {this.front = value}
         return this.storage.push(value)
     }
 
     //dequeue
+    dequeue() {
+        if (this.front === null) {
+            return null;
+        } else {
+            this.front = this.storage[1];
+            return this.storage.shift();
+        }
+    }
+
     //peek
     //isEmpty
 }
