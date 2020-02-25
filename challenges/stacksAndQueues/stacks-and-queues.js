@@ -51,13 +51,17 @@ class Queue {
     }
 
     //enqueue
+    enqueue(value) {
+        !this.front ? this.front = value : this.front = null
+        return this.storage.push(value)
+    }
+
     //dequeue
     //peek
     //isEmpty
 }
 
 module.exports = {
-    Node,
     Stack,
     Queue
 }
