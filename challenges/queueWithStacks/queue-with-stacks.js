@@ -37,12 +37,12 @@ class Stack {
 class PseudoQueue {
     constructor() {
         this.front = null;
-        this.storage = [];
+        this.storage = new Stack(this.front);
     }
 
     //enqueue
     enqueue(value) {
-        if (this.front === null) {this.front = value}
+        if (this.front === null) {this.front = this.storage.top}
         return this.storage.push(value)
     }
 
@@ -51,12 +51,12 @@ class PseudoQueue {
         if (this.front === null) {
             return null;
         } else {
-            if (this.storage[1] === undefined) {
+            if (this.storage.top.next === undefined) {
                 this.front = null;
             } else {
-                this.front = this.storage[1];
+                this.front = this.storage.top.next;
             }
-            return this.storage.shift();
+            return this.storage.pop();
         }
     }
 
