@@ -30,3 +30,28 @@ describe('dequeue animals from shelter', () => {
     expect(testShelter.items.length).toEqual(4);
   })
 })
+describe('dequeue animals from shelter until there none', () => {
+  const testShelter = new AnimaleShelter;
+  testShelter.items = ['dog','cat','cat','dog','cat']
+  it('remove all cats ', () => {
+    const aCat = testShelter.dequeue('cat')
+    const bCat = testShelter.dequeue('cat')
+    const cCat = testShelter.dequeue('cat')
+    const dNoCat = testShelter.dequeue('cat')
+    expect(aCat).toEqual(['cat']);
+    expect(bCat).toEqual(['cat']);
+    expect(cCat).toEqual(['cat']);
+    expect(dNoCat).toEqual('No cat in Shelter');
+    expect(testShelter.items).toEqual(['dog','dog']);
+    expect(testShelter.items.length).toEqual(2);
+  })
+  it('remove all dogs ', () => {
+    const aDog = testShelter.dequeue('dog')
+    const bDog = testShelter.dequeue('dog')
+    const NoDog = testShelter.dequeue('dog')
+    expect(aDog).toEqual(['dog']);
+    expect(bDog).toEqual(['dog']);
+    expect(NoDog).toEqual('No dog in Shelter');
+    expect(testShelter.items.length).toEqual(0);
+  })
+})
