@@ -1,6 +1,5 @@
 class AnimaleShelter {
   constructor() {
-    this.front = null;
     // either 'dog' or 'cat' in array
     this.items = [];
   }
@@ -13,10 +12,9 @@ class AnimaleShelter {
     for (let i = 0 ; i < this.items.length; i++) {
       if (this.items[i] === pref) {
         return this.items.splice(i,1);
-      } else {
-        return `No ${pref} in Shelter`;
       }
     }
+    return `No ${pref} in Shelter`;
   }
 
 }
