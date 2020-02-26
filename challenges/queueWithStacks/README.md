@@ -19,3 +19,6 @@ The Stack instances have only push, pop, and peek methods.
 ## API
 <!-- Description of each method publicly available to your Stack and Queue-->
 
+
+
+- [PR](https://github.com/astrokd/data-structures-and-algorithms/pull/41)
