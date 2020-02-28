@@ -4,16 +4,16 @@ Implement Trees data structure
 
 ## Challenge
 <!-- Description of the challenge -->
-- [ ] - Create a Node class that has a left and a right
+- [x] - Create a Node class that has a left and a right
 - [ ] - Create a BinaryTree class and define methods for each depth first traversals
   - [ ] - `preOrder`
   - [ ] - `inOrder`
   - [ ] - `postOrder`
 - [ ] - Error handling
 - [ ] - Test
-  - [ ] - Instantiate empty tree
-  - [ ] - Instantiate a tree with a single root node
-  - [ ] - Add a left child and right child to a single root node
+  - [x] - Instantiate empty tree
+  - [x] - Instantiate a tree with a single root node
+  - [x] - Add a left child and right child to a single root node
   - [ ] - return a collection of preorder traversal
   - [ ] - return a collection of inorder traversal
   - [ ] - return a collection of ipostorder traversal
