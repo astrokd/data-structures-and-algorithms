@@ -14,6 +14,10 @@ class Node {
   //preOrder
 
   //inOrder
-  
+
   //postOrder
 
+module.exports = {
+  Node,
+  BinaryTree
+}

@@ -1,5 +1,5 @@
 //Test
-
+const { Node,BinaryTree } = require('../tree')
 
 //Instantiate empty tree
 
