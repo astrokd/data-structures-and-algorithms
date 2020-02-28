@@ -9,8 +9,15 @@ describe('Instantiate empty tree', () => {
   })
 })
 
-
 //Instantiate a tree with a single root node
+describe('Instantiate  a tree with a single root node', () => {
+  const testTree = new BinaryTree
+  const testNode = new Node('A')
+  testTree.root = testNode
+  it('returns root of tree ', () => {
+    expect(testTree.root.value).toEqual('A')
+  })
+})
 
 //Add a left child and right child to a single root node
 
