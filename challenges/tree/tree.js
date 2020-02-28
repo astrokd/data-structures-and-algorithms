@@ -1,6 +1,6 @@
 // Binary Tree and BST Implementation
 
-// Node Class
+// Node Class of tree
 class Node {
   constructor(value, left = null, right = null) {
     this.value = value;
@@ -10,6 +10,13 @@ class Node {
 }
 
 //Create a BinaryTree class
+class BinaryTree {
+  constructor() {
+    this.root = null;
+  }
+
+
+}
 
   //preOrder
 

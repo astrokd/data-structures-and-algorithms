@@ -2,6 +2,13 @@
 const { Node,BinaryTree } = require('../tree')
 
 //Instantiate empty tree
+describe('Instantiate empty tree', () => {
+  const testTree = new BinaryTree
+  it('returns that tree is empty ', () => {
+    expect(testTree.root).toEqual(null)
+  })
+})
+
 
 //Instantiate a tree with a single root node
 
