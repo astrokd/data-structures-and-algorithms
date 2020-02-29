@@ -22,12 +22,11 @@ class BinaryTree {
   preOrder() {
     let stackArr = [];
 
-    let traverse = (node) =>  {
+    let traverse = (node) => {
       if (node === null) {
         return null;
       }
-      stackArr.push(node)
-      
+      stackArr.push(node.value)
       if(node.left) {
         traverse(node.left)
       }
@@ -35,6 +34,8 @@ class BinaryTree {
         traverse(node.right)
       }
     }
+    
+    traverse(this.root)
     return stackArr;
 
   }

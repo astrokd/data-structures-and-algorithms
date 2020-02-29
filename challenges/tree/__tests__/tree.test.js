@@ -20,7 +20,7 @@ describe('Instantiate  a tree with a single root node', () => {
 })
 
 //Add a left child and right child to a single root node
-describe('Instantiate  a tree with a root, a left, and a right', () => {
+describe('Instantiate a tree with a root, a left, and a right', () => {
   const testTree = new BinaryTree
   const rootNode = new Node('A')
   const leftNode = new Node('B')
@@ -37,6 +37,25 @@ describe('Instantiate  a tree with a root, a left, and a right', () => {
 })
 
 //return a collection of preorder traversal
+describe('Preorder Traversal', () => {
+  const testTree = new BinaryTree
+  const rootNode = new Node('A')
+  const bNode = new Node('B')
+  const cNode = new Node('C')
+  const dNode = new Node('D')
+  const eNode = new Node('E')
+  const fNode = new Node('F')
+  bNode.left = dNode
+  bNode.right = eNode
+  cNode.left = fNode
+  rootNode.left = bNode
+  rootNode.right = cNode
+  testTree.root = rootNode
+  let result = testTree.preOrder()
+  it('returns tree preorder traversed ', () => {
+    expect(result).toEqual(['A','B','D','E','C','F'])
+  })
+})
 
 //return a collection of inorder traversal
 

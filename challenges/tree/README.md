@@ -17,7 +17,7 @@ Implement Trees data structure
   - [ ] - return a collection of preorder traversal
   - [ ] - return a collection of inorder traversal
   - [ ] - return a collection of ipostorder traversal
-- [ ] - Stretch Goal, k-ary-tree
+- [ ] - Stretch Goal, breadth-first traversal
 
 ## Approach & Efficiency
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
