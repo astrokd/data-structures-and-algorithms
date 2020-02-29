@@ -10,7 +10,7 @@ CodeFellows 401 Challenges
  - [x] Class 08 : ll Merge : [pull request](https://github.com/astrokd/data-structures-and-algorithms/pull/38) : [README](https://github.com/astrokd/data-structures-and-algorithms/blob/master/challenges/Data-Structures/llMerge/README.md)
  - [ ] Class 11 : Queue with Stacks : [pull request](https://github.com/astrokd/data-structures-and-algorithms/pull/41) : [README]
  - [x] Class 11 Stack and Queue : Stack and Queue Implementation : [pull request](https://github.com/astrokd/data-structures-and-algorithms/pull/39) : [README](https://github.com/astrokd/data-structures-and-algorithms/blob/master/challenges/stacksAndQueues/README.md)
- - [ ] Class 12 : fifo-animal-shelter : [pull request](https://github.com/astrokd/data-structures-and-algorithms/pull/42) : [README]
+ - [ ] Class 12 : fifo-animal-shelter : [pull request](https://github.com/astrokd/data-structures-and-algorithms/pull/42) : [README](https://github.com/astrokd/data-structures-and-algorithms/blob/master/challenges/fifoAnimalShelter/README.md)
  - [x] Class 15 : Binary Tree : [pull request](https://github.com/astrokd/data-structures-and-algorithms/pull/43) : [README](https://github.com/astrokd/data-structures-and-algorithms/blob/master/challenges/tree/README.md)
  - [ ] Class 0X : ??? : [pull request] : [README]
  - [ ] Class 0X : ??? : [pull request] : [README]
