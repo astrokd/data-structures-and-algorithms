@@ -58,5 +58,43 @@ describe('Preorder Traversal', () => {
 })
 
 //return a collection of inorder traversal
+describe('Inorder Traversal', () => {
+  const testTree = new BinaryTree
+  const rootNode = new Node('A')
+  const bNode = new Node('B')
+  const cNode = new Node('C')
+  const dNode = new Node('D')
+  const eNode = new Node('E')
+  const fNode = new Node('F')
+  bNode.left = dNode
+  bNode.right = eNode
+  cNode.left = fNode
+  rootNode.left = bNode
+  rootNode.right = cNode
+  testTree.root = rootNode
+  let result = testTree.inOrder()
+  it('returns tree inorder traversed ', () => {
+    expect(result).toEqual(['D','B','E','A','F','C'])
+  })
+})
 
-//return a collection of ipostorder
+//return a collection of postorder
+describe('Postorder Traversal', () => {
+  const testTree = new BinaryTree
+  const rootNode = new Node('A')
+  const bNode = new Node('B')
+  const cNode = new Node('C')
+  const dNode = new Node('D')
+  const eNode = new Node('E')
+  const fNode = new Node('F')
+  bNode.left = dNode
+  bNode.right = eNode
+  cNode.left = fNode
+  rootNode.left = bNode
+  rootNode.right = cNode
+  testTree.root = rootNode
+  let result = testTree.postOrder()
+  it('returns tree postorder traversed ', () => {
+    expect(result).toEqual(['D','E','B','F','C','A'])
+  })
+})

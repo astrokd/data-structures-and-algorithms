@@ -34,20 +34,51 @@ class BinaryTree {
         traverse(node.right)
       }
     }
-    
+
     traverse(this.root)
     return stackArr;
-
   }
 
   //inOrder
   inOrder(node) {
+    let stackArr = [];
 
+    let traverse = (node) => {
+      if (node === null) {
+        return null;
+      }
+      if(node.left) {
+        traverse(node.left)
+      }
+      stackArr.push(node.value)
+      if(node.right) {
+        traverse(node.right)
+      }
+    }
+    
+    traverse(this.root)
+    return stackArr;
   }
 
   //postOrder
   postOrder(node) {
+    let stackArr = [];
 
+    let traverse = (node) => {
+      if (node === null) {
+        return null;
+      }
+      if(node.left) {
+        traverse(node.left)
+      }
+      if(node.right) {
+        traverse(node.right)
+      }
+      stackArr.push(node.value)
+    }
+    
+    traverse(this.root)
+    return stackArr;
   }
 }
 
