@@ -40,7 +40,7 @@ class BinaryTree {
   }
 
   //inOrder
-  inOrder(node) {
+  inOrder() {
     let stackArr = [];
 
     let traverse = (node) => {
@@ -61,7 +61,7 @@ class BinaryTree {
   }
 
   //postOrder
-  postOrder(node) {
+  postOrder() {
     let stackArr = [];
 
     let traverse = (node) => {
@@ -80,6 +80,14 @@ class BinaryTree {
     traverse(this.root)
     return stackArr;
   }
+
+  //breadthFirst
+  breadthFirst() {
+    let queueArr = [];
+
+    
+  }
+
 }
 
 module.exports = {
