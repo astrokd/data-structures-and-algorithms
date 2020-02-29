@@ -26,7 +26,9 @@ class BinaryTree {
       if (node === null) {
         return null;
       }
+      //Add node value to stack
       stackArr.push(node.value)
+
       if(node.left) {
         traverse(node.left)
       }
@@ -36,7 +38,7 @@ class BinaryTree {
     }
 
     traverse(this.root)
-    return stackArr;
+    return stackArr.length > 0 ? stackArr : null;
   }
 
   //inOrder
@@ -50,14 +52,16 @@ class BinaryTree {
       if(node.left) {
         traverse(node.left)
       }
+      //Add node value to stack
       stackArr.push(node.value)
+
       if(node.right) {
         traverse(node.right)
       }
     }
     
     traverse(this.root)
-    return stackArr;
+    return stackArr.length > 0 ? stackArr : null;
   }
 
   //postOrder
@@ -74,18 +78,21 @@ class BinaryTree {
       if(node.right) {
         traverse(node.right)
       }
+      //Add node value to stack
       stackArr.push(node.value)
     }
     
     traverse(this.root)
-    return stackArr;
+    return stackArr.length > 0 ? stackArr : null;
   }
 
   //breadthFirst
   breadthFirst() {
     let queueArr = [];
+    queueArr.push(this.root.value)
 
     
+    return queueArr.length > 0 ? queueArr : null;
   }
 
 }
