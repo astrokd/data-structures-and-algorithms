@@ -25,5 +25,10 @@ return root node of tree
 - Space is also 0(n) because we rewrite the whole tree.
 
 ## API
-<!-- Description of each method publicly available to your Stack and Queue-->
+<!-- Description of each method publicly available -->
+tree.fizzBuzzTree()
+returns new tree 
 
+
+## WhiteBoard
+![whiteboard](./IMG_1441.jpeg)
