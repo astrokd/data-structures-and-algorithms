@@ -23,7 +23,16 @@ class BinaryTree {
       if (node === null) {
         return null
       }
-      node.value = node.value.toString()
+
+      if (node.value%15 === 0) {
+        node.value = 'FizzBuzz'
+      } else if (node.value%3 === 0) {
+        node.value = 'Fizz'
+      } else if (node.value%5 === 0) {
+        node.value = 'Buzz'
+      } else {
+        node.value = node.value.toString()
+      }
 
       if(node.left) {
         traverse(node.left)
