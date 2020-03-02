@@ -16,12 +16,14 @@ class BinaryTree {
   fizzBuzzTree() {
     // make new tree
     let newTree = new BinaryTree
+    newTree.root = this.root
 
     // traverse tree
     let traverse = (node) => {
       if (node === null) {
         return null
       }
+      node.value = node.value.toString()
 
       if(node.left) {
         traverse(node.left)
@@ -30,8 +32,8 @@ class BinaryTree {
         traverse(node.right)
       }
     }
-    traverse(this.root)
-
+    traverse(newTree.root)
+    return newTree
   }
 
 }
