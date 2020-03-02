@@ -22,7 +22,7 @@ class BinaryTree {
       if (node === null) {
         return null
       }
-      
+
       if(node.left) {
         traverse(node.left)
       }
@@ -40,6 +40,5 @@ class BinaryTree {
 
 module.exports = {
   Node,
-  BinaryTree,
-  fizzBuzzTree
+  BinaryTree
 }
