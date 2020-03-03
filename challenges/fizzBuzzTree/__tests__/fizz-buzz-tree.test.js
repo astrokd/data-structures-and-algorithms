@@ -32,6 +32,11 @@ describe('test fizz buzz tree of 3', () => {
     expect(newTree.root.left.value).toEqual('FizzBuzz')
     expect(newTree.root.right.value).toEqual('2')
   })
+  it('original tree is unmodified', () => {
+    expect(testTree.root.value).toEqual(1)
+    expect(testTree.root.left.value).toEqual(0)
+    expect(testTree.root.right.value).toEqual(2)
+  })
 })
 
 describe('test fizz buzz tree of ', () => {
