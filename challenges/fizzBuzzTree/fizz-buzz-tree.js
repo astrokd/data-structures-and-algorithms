@@ -7,6 +7,30 @@ class Node {
   }
 }
 
+// traverse tree
+let traverse = (node) => {
+  if (node === null) {
+    return null
+  }
+
+  if (node.value%15 === 0) {
+    node.value = 'FizzBuzz'
+  } else if (node.value%3 === 0) {
+    node.value = 'Fizz'
+  } else if (node.value%5 === 0) {
+    node.value = 'Buzz'
+  } else {
+    node.value = node.value.toString()
+  }
+
+  if(node.left) {
+    traverse(node.left)
+  }
+  if(node.right) {
+    traverse(node.right)
+  }
+}
+
 //Binary Tree class
 class BinaryTree {
   constructor() {
@@ -18,36 +42,12 @@ class BinaryTree {
     let newTree = new BinaryTree
     newTree.root = this.root
 
-    // traverse tree
-    let traverse = (node) => {
-      if (node === null) {
-        return null
-      }
-
-      if (node.value%15 === 0) {
-        node.value = 'FizzBuzz'
-      } else if (node.value%3 === 0) {
-        node.value = 'Fizz'
-      } else if (node.value%5 === 0) {
-        node.value = 'Buzz'
-      } else {
-        node.value = node.value.toString()
-      }
-
-      if(node.left) {
-        traverse(node.left)
-      }
-      if(node.right) {
-        traverse(node.right)
-      }
-    }
+    //call traverse
     traverse(newTree.root)
     return newTree
   }
 
 }
-
-
 
 module.exports = {
   Node,
