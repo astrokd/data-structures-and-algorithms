@@ -7,28 +7,31 @@ class Node {
   }
 }
 
+// Fizz Buzz
+let fizzBuzz = (value) => {
+  if (value%15 === 0) {
+    value = 'FizzBuzz'
+  } else if (value%3 === 0) {
+    value = 'Fizz'
+  } else if (value%5 === 0) {
+    value = 'Buzz'
+  } else {
+    value = value.toString()
+  }
+  return value
+}
+
 // traverse tree
 let traverse = (node) => {
-  if (node === null) {
-    return null
-  }
+  if (node === null) return null
 
-  if (node.value%15 === 0) {
-    node.value = 'FizzBuzz'
-  } else if (node.value%3 === 0) {
-    node.value = 'Fizz'
-  } else if (node.value%5 === 0) {
-    node.value = 'Buzz'
-  } else {
-    node.value = node.value.toString()
-  }
+  let newValue = fizzBuzz(node.value)
 
-  if(node.left) {
-    traverse(node.left)
-  }
-  if(node.right) {
-    traverse(node.right)
-  }
+  let newNode = new Node(newValue)
+  newNode.left = traverse(node.left)
+  newNode.right = traverse(node.right)
+
+  return newNode
 }
 
 //Binary Tree class
@@ -37,13 +40,12 @@ class BinaryTree {
     this.root = null;
   }
 
+  //Fizz Buzz method
   fizzBuzzTree() {
-    // make new tree
     let newTree = new BinaryTree
-    newTree.root = this.root
 
     //call traverse
-    traverse(newTree.root)
+    newTree.root = traverse(this.root)
     return newTree
   }
 
