@@ -33,7 +33,7 @@ findMaxVal as breadthFirst
 ```
 
 Time is O(n), loops through binaryTree once
-Space is O(2), stores an array that is the output and builds a queue for each depth of tree
+Space is O(1), stores an output and a queue that never exceeds the largest width
 
 ## API
 <!-- Description of each method publicly available to your Stack and Queue-->
@@ -46,6 +46,4 @@ Space is O(2), stores an array that is the output and builds a queue for each de
   - method findMaximumValue
 
 
-[PR for Trees](https://github.com/astrokd/data-structures-and-algorithms/pull/43)
-
-[PR for Breadth First traversal](https://github.com/astrokd/data-structures-and-algorithms/pull/45)
+[PR for Max Value of Trees](https://github.com/astrokd/data-structures-and-algorithms/pull/47)
