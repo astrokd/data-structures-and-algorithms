@@ -13,5 +13,8 @@ CodeFellows 401 Challenges
  - [x] Class 12 : fifo-animal-shelter : [pull request](https://github.com/astrokd/data-structures-and-algorithms/pull/42) : [README](https://github.com/astrokd/data-structures-and-algorithms/blob/master/challenges/fifoAnimalShelter/README.md)
  - [x] Class 15 : Binary Tree : [pull request](https://github.com/astrokd/data-structures-and-algorithms/pull/43) : [README](https://github.com/astrokd/data-structures-and-algorithms/blob/master/challenges/tree/README.md)
  - [x] Class 16 : FizzBuzz Tree : [pull request](https://github.com/astrokd/data-structures-and-algorithms/pull/44) : [README](https://github.com/astrokd/data-structures-and-algorithms/blob/master/challenges/fizzBuzzTree/README.md)
+ - [ ] Class 0X : ??? : [pull request](https://github.com/astrokd/data-structures-and-algorithms/pull/45) : [README]
+ - [ ] Class 0X : ??? : [pull request] : [README]
+ - [ ] Class 0X : ??? : [pull request] : [README]
  - [ ] Class 0X : ??? : [pull request] : [README]
  - [ ] Class 0X : ??? : [pull request] : [README]
