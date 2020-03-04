@@ -13,9 +13,6 @@ class Node {
 class BinaryTree {
   constructor() {
     this.root = null;
-    // this.preOrderOutput = [];
-    // this.inOrderOutput = [];
-    // this.postOrderOutput = [];
   }
 
   //preOrder
