@@ -34,6 +34,24 @@ class BinaryTree {
     return outputArr.length > 0 ? outputArr : null;
   }
 
+  //reverse breadth first traversal
+  reverseBreadthFirst() {
+    let outputArr = [];
+
+    let breadth = new Queue()
+    breadth.enqueue(this.root)
+
+    while (breadth.peek()) {
+      let front = breadth.dequeue()
+      outputArr.push(front.value)
+
+      if (front.left) breadth.enqueue(front.left)
+      if (front.right) breadth.enqueue(front.right)
+    }
+    
+    return outputArr.length > 0 ? outputArr : null;
+  }
+
 }
 
 module.exports = {
