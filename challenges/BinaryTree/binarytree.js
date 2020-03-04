@@ -1,4 +1,5 @@
-// Binary Tree and BST Implementation
+// Binary Tree 
+const Queue = require('./stacks-and-queues').Queue
 
 // Node Class of tree
 class Node {
@@ -15,81 +16,22 @@ class BinaryTree {
     this.root = null;
   }
 
-  //preOrder
-  preOrder() {
-    let stackArr = [];
-
-    let traverse = (node) => {
-      if (node === null) {
-        return null;
-      }
-      //Add node value to stack
-      stackArr.push(node.value)
-
-      if(node.left) {
-        traverse(node.left)
-      }
-      if(node.right) {
-        traverse(node.right)
-      }
-    }
-
-    traverse(this.root)
-    return stackArr.length > 0 ? stackArr : null;
-  }
-
-  //inOrder
-  inOrder() {
-    let stackArr = [];
-
-    let traverse = (node) => {
-      if (node === null) {
-        return null;
-      }
-      if(node.left) {
-        traverse(node.left)
-      }
-      //Add node value to stack
-      stackArr.push(node.value)
-
-      if(node.right) {
-        traverse(node.right)
-      }
-    }
-    
-    traverse(this.root)
-    return stackArr.length > 0 ? stackArr : null;
-  }
-
-  //postOrder
-  postOrder() {
-    let stackArr = [];
-
-    let traverse = (node) => {
-      if (node === null) {
-        return null;
-      }
-      if(node.left) {
-        traverse(node.left)
-      }
-      if(node.right) {
-        traverse(node.right)
-      }
-      //Add node value to stack
-      stackArr.push(node.value)
-    }
-    
-    traverse(this.root)
-    return stackArr.length > 0 ? stackArr : null;
-  }
-
   //breadthFirst
   breadthFirst() {
-    let queueArr = [];
-    queueArr.push(this.root.value)
+    let outputArr = [];
 
+    let breadth = new Queue()
+    breadth.enqueue(this.root)
+
+    while (breadth.peek()) {
+      let front = breadth.dequeue()
+      outputArr.push(front.value)
+
+      if (front.left) breadth.enqueue(front.left)
+      if (front.right) breadth.enqueue(front.right)
+    }
     
-    return queueArr.length > 0 ? queueArr : null;
+    return outputArr.length > 0 ? outputArr : null;
   }
 
 }
