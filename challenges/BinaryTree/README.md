@@ -17,7 +17,19 @@ Write a breadth first traversal method which takes a Binary Tree as its unique i
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
 
 - `breadth-first`
+```
+Create an empty output array
+Create a queue
+enqueue root of binarytree into queue
+while the queue is not empty
+  dequeue from the queue and place it's value into the output array
+  if there is a left in the binary tree enqueue it
+  if there is a right in the binary tree enqueue it
+return output array if length > 0 else return null
+```
 
+Time is O(n), loops through binaryTree once
+Space is O(2), stores an array that is the output and builds a queue for each depth of tree
 
 ## API
 <!-- Description of each method publicly available to your Stack and Queue-->
@@ -32,6 +44,7 @@ Write a breadth first traversal method which takes a Binary Tree as its unique i
   - method preOrder
   - method inOrder
   - method postOrder
+  - method breadthFirst
 
 
 [PR for Trees](https://github.com/astrokd/data-structures-and-algorithms/pull/43)
