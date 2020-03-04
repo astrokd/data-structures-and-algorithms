@@ -14,7 +14,7 @@ CodeFellows 401 Challenges
  - [x] Class 15 : Binary Tree : [pull request](https://github.com/astrokd/data-structures-and-algorithms/pull/43) : [README](https://github.com/astrokd/data-structures-and-algorithms/blob/master/challenges/tree/README.md)
  - [x] Class 16 : FizzBuzz Tree : [pull request](https://github.com/astrokd/data-structures-and-algorithms/pull/44) : [README](https://github.com/astrokd/data-structures-and-algorithms/blob/master/challenges/fizzBuzzTree/README.md)
  - [x] Class 17 : Breadth First Binary Tree : [pull request](https://github.com/astrokd/data-structures-and-algorithms/pull/45) : [README](https://github.com/astrokd/data-structures-and-algorithms/blob/master/challenges/BinaryTree/README.md)
- - [x] Class 16 : FizzBuss Tree 2.0 : [pull request](https://github.com/astrokd/data-structures-and-algorithms/pull/46) : [README](https://github.com/astrokd/data-structures-and-algorithms/blob/master/challenges/fizzBuzzTree/README.md)
+ - [x] Class 16 : FizzBuzz Tree 2.0 : [pull request](https://github.com/astrokd/data-structures-and-algorithms/pull/46) : [README](https://github.com/astrokd/data-structures-and-algorithms/blob/master/challenges/fizzBuzzTree/README.md)
  - [ ] Class 0X : ??? : [pull request] : [README]
  - [ ] Class 0X : ??? : [pull request] : [README]
  - [ ] Class 0X : ??? : [pull request] : [README]
