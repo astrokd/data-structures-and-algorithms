@@ -77,5 +77,5 @@ In mergeSort(left), within context A-right, set the values for n to 1, mid to 1,
 |                 |                       |   |   |   |         |        |         |
 
 ### Efficency
-- Time
-- Space
+- Time O(n log(n)) The log of the size of the array times the array
+- Space O(n). The size of the array
