@@ -44,6 +44,25 @@ ALGORITHM Merge(left, right, arr)
 
 Input Array: `[8,4,23,42,16,15]`
 
+## step through
+
+|      arr        |   mergeSort function  | n | mid |  left  |  right   | context |
+|-----------------|-----------------------|---|-----|--------|----------|---------|
+|[8,4,23,42,16,15]|mergeSort(arr)         | 6 |  3  |[8,4,23]|[42,16,15]|    A    |
+|        "        |mergeSort(left)        | 3 |  1  |  [8]   |  [4,23]  | A-left  | 
+|        "        |mergeSort(left)        | 1 |  1  |        |          |  null   |
+|        "        |mergeSort(right)       | 2 |  2  |  [4]   |   [23]   | A-right |
+|        "        |mergeSort(left)        | 1 |  1  |        |          |  null   |
+|                 |                       |   |     |        |          |         |
+
+|      arr        |   function            | i | j | k | context |
+|-----------------|-----------------------|---|---|---|---------|
+|[8,4,23,42,16,15]|merge(left, right, arr)| 0 | 0 | 0 |A-right  |
+|        "        |                       |   |   |   |         | 
+|        "        |                       |   |   |   |         |
+|        "        |                       |   |   |   |         |
+|        "        |                       |   |   |   |         |
+|                 |                       |   |   |   |         |
 
 ### Efficency
 - Time
