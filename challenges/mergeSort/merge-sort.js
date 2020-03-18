@@ -19,6 +19,8 @@ function merge(left, right, arr) {
   let i = 0
   let j = 0
   let k = 0
+  console.log('left',left)
+  console.log('right',right)
   while ( i<left.length && j<right.length ) {
     // compare left to right and sort lowest to the left
     if (left[i] <= right[j]) {
@@ -38,12 +40,13 @@ function merge(left, right, arr) {
       k++
     }
   } else {
-    while(i < right.length) {
+    while(i < left.length) {
       arr[k] = left[i]
       i++
       k++
     }
   }
+  console.log('arr',arr)
 }
 
 module.exports = mergeSort
