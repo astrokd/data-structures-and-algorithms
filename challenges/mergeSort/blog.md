@@ -46,7 +46,16 @@ Input Array: `[8,4,23,42,16,15]`
 
 ## step through
 
-In first run (aka context A) arr is `[8,4,23,42,16,15]`, set the values for n to 6, mid to 3, left to `[8,4,23]` and right to `[42,16,15]`.
+In first run (aka context A) arr is `[8,4,23,42,16,15]`, set the values for n to 6, mid to 3, left to `[8,4,23]` and right to `[42,16,15]`.  
+
+In mergeSort(left), context A-left, set the values for n to 3, mid to 1, left to `[8]` and right to `[4,23]`.
+
+In mergeSort(left), within context A-left, set the values for n to 1, mid to 1, n is not greater the 1 so context is null and we return to context A-left.
+
+In mergeSort(right=`[4,23]`), context A-right, set the values for n to 2, mid to 2, left to `[4]` and right to `[23]`.
+
+In mergeSort(left), within context A-right, set the values for n to 1, mid to 1, n is not greater the 1 so context is null and we return to context A-left.
+
 
 |      arr          |   mergeSort function  | n | mid |  left  |  right   | context |
 |-------------------|-----------------------|---|-----|--------|----------|---------|
