@@ -32,7 +32,7 @@ function merge(left, right, arr) {
     }
     k = k + 1
   }
-  // place highest in the rest of the array indexes
+  // place highest in the right side of the array
   if (i === left.length) {
     while(j < right.length) {
       arr[k] = right[j]

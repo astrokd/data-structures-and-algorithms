@@ -54,7 +54,7 @@ In mergeSort(left), within context A-left, set the values for n to 1, mid to 1, 
 
 In mergeSort(right=`[4,23]`), context A-right, set the values for n to 2, mid to 2, left to `[4]` and right to `[23]`.
 
-In mergeSort(left), within context A-right, set the values for n to 1, mid to 1, n is not greater the 1 so context is null and we return to context A-left.
+In mergeSort(left), within context A-right, set the values for n to 1, mid to 1, n is not greater the 1 so context is null and we return to context A-right.
 
 
 |      arr          |   mergeSort function  | n | mid |  left  |  right   | context |
@@ -63,9 +63,9 @@ In mergeSort(left), within context A-right, set the values for n to 1, mid to 1,
 |        "          |mergeSort(left)        | 3 |  1  |  [8]   |  [4,23]  | A-left  | 
 |        "          |mergeSort(left)        | 1 |  1  |        |          |  null   |
 |        "          |mergeSort(right)       | 2 |  2  |  [4]   |   [23]   | A-right |
-|        "          |mergeSort(left)        | 1 |  1  |        |          |  null   |
+|[4,23]             |mergeSort(left)        | 1 |  1  |        |          |  null   |
 |                   |                       |   |     |        |          |         |
-|[4,23,23,23,23,23] |                       |   |     |        |          |         |
+|                   |                       |   |     |        |          |         |
 
 |      arr        |   function            | i | j | k | context |  left  |  right  |
 |-----------------|-----------------------|---|---|---|---------|--------|---------|
