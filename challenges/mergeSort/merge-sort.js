@@ -12,9 +12,7 @@ let mergeSort = (arr) => {
     mergeSort(left)
     mergeSort(right)
     merge(left, right, arr)
-
   }
-
 }
 
 function merge(left, right, arr) {
@@ -22,6 +20,7 @@ function merge(left, right, arr) {
   let j = 0
   let k = 0
   while ( i<left.length && j<right.length ) {
+    // compare left to right and sort lowest to the left
     if (left[i] <= right[j]) {
       arr[k] = left[i]
       i = i + 1
@@ -31,12 +30,20 @@ function merge(left, right, arr) {
     }
     k = k + 1
   }
+  // place highest in the rest of the array indexes
   if (i === left.length) {
-    arr[k] = right[i]
+    while(j < right.length) {
+      arr[k] = right[j]
+      j++
+      k++
+    }
   } else {
-    arr[k] = left[j]
+    while(i < right.length) {
+      arr[k] = left[i]
+      i++
+      k++
+    }
   }
-
 }
 
 module.exports = mergeSort
