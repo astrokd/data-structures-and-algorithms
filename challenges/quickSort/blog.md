@@ -50,7 +50,7 @@ Call the QuickSort function with arr an array `[8,4,23,42,16,15]`, left = `0` an
         right = `5`
             pivot = 15
             low = left - 1 (-1)
-                for i = 0 loop while i <= right
+                for i = 0 loop while i < right
                     8 < 15      4 < 15      23 !< 15    42 !< 15    16 !< 15
                     low = 0     low = 1
                     i = 0       i = 1
@@ -64,12 +64,17 @@ Call the QuickSort function with arr an array `[8,4,23,42,16,15]`, left = `0` an
             left = `0`
             right = `1`
                 pivot  = 4
-                low
+                    for 1 = 0 loop while i < right
+                        8 !< 4      4 !< 4      23 !< 4    42 !< 4    23 !< 4
+                    swap index right = `1` with with low + 1 = `0`
+                        place 4 at index `0`
+                        place 8 at index `1`
+
 
 
                     
 
 
 ### Efficency
-- Time 
-- Space 
+- Time O(n log(n)) like merge sort
+- Space O(log(n))
