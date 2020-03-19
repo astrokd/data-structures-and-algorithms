@@ -11,7 +11,7 @@ let quickSort = (arr, left = 0, right = arr.length-1) => {
 let partition = (arr, left, right) => {
   let pivot = arr[right]
   let low = left - 1
-  for (let i = left; i < right; i++) {
+  for (let i = left; i <= right; i++) {
     if (arr[i] < pivot) {
       low++
       swap(arr, i, low)
