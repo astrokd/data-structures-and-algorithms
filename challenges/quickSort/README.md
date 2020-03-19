@@ -1,4 +1,4 @@
-# Merge Sort
+# Quick Sort
 <!-- Short summary or background information -->
 Sort array using the Quick Sort method
 
