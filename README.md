@@ -22,7 +22,7 @@ CodeFellows 401 Challenges
  - [ ] Class 27 : ??? : [pull request] : [README]
  - [ ] Class 28 : ??? : [pull request] : [README]
  - [ ] Class 29 : ??? : [pull request] : [README]
- - [x] Class 31 : ??? : [pull request](https://github.com/astrokd/data-structures-and-algorithms/pull/52) : [README](https://github.com/astrokd/data-structures-and-algorithms/blob/master/challenges/repeatedWord/README.md)
+ - [x] Class 31 : Repeat First Word : [pull request](https://github.com/astrokd/data-structures-and-algorithms/pull/52) : [README](https://github.com/astrokd/data-structures-and-algorithms/blob/master/challenges/repeatedWord/README.md)
  - [ ] Class 32 : ??? : [pull request] : [README]
  - [ ] Class 33 : ??? : [pull request] : [README]
  - [ ] Class 34 : ??? : [pull request] : [README]
