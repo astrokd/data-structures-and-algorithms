@@ -48,3 +48,34 @@ let tree_intersection = (node1, node2) => {
   return intersections;
 }
 
+describe('Tree Intersection', () => {
+  const cLLNode1 = new Node(125)
+  const cLRNode1 = new Node(175)
+  const cRLNode1 = new Node(300)
+  const cRRNode1 = new Node(500)
+  const bLLNode1 = new Node(75)
+  const bLRNode1 = new Node(160,cLLNode1,cLRNode1)
+  const bRLNode1 = new Node(200)
+  const bRRNode1 = new Node(350,cRLNode1,cRRNode1)
+  const aLNode1 = new Node(100,bLLNode1,bLRNode1)
+  const aRNode1 = new Node(250,bRLNode1,bRRNode1)
+  const rootNode1 = new Node(150,aLNode1,aRNode1)
+
+
+  const cLLNode2 = new Node(125)
+  const cLRNode2 = new Node(175)
+  const cRLNode2 = new Node(4)
+  const cRRNode2 = new Node(500)
+  const bLLNode2 = new Node(15)
+  const bLRNode2 = new Node(160,cLLNode2,cLRNode2)
+  const bRLNode2 = new Node(200)
+  const bRRNode2 = new Node(350,cRLNode2,cRRNode2)
+  const aLNode2 = new Node(100,bLLNode2,bLRNode2)
+  const aRNode2 = new Node(600,bRLNode2,bRRNode2)
+  const rootNode2 = new Node(42,aLNode2,aRNode2)
+
+  const result = [100,160,125,175,200,350,500]
+  if('return array of intersecting nodes', () => {
+    expect(tree_intersection(rootNode1,rootNode2)).toEqual(result)
+  })
+})
