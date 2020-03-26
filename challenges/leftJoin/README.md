@@ -1,4 +1,4 @@
-# Mashmap Left Join
+# Hashmap Left Join
 <!-- Short summary or background information -->
 Implement a simplified LEFT JOIN for 2 Hashmaps.
 
