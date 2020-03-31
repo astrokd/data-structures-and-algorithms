@@ -26,5 +26,5 @@ CodeFellows 401 Challenges
  - [ ] Class 32 : ??? : [pull request] : [README]
  - [ ] Class 33 : ??? : [pull request] : [README]
  - [ ] Class 34 : ??? : [pull request] : [README]
- - [ ] Class 0X : ??? : [pull request] : [README]
+ - [x] Class 36 : Graphs : [pull request](https://github.com/astrokd/data-structures-and-algorithms/pull/55) : [README]
  - [ ] Class 0X : ??? : [pull request] : [README]
