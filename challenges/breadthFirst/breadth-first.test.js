@@ -1,40 +1,40 @@
 const { Queue, Node, Edge, Graph } = require ('./breadth-first')
 
-describe('graph', () => {
+describe('Breadth First Traversal for a graph', () => {
   const testGraph = new Graph
-  const testNode = new Node(1)
-  it('Node can be successfully added to the graph', () => {
-    testGraph.addNode(testNode)
-    expect(testGraph.adjacencyList.get(testNode)).toEqual([])
-  })
-  it('An edge can be successfully added to the graph', () => {
-    const testNode2 = new Node(2)
-    testGraph.addEdge(testNode,testNode2)
-    expect(testGraph.adjacencyList.get(testNode)).toHaveLength(1)
+
+  const testNode1 = new Node('Pandora')
+  const testNode2 = new Node('Arendelle')
+  const testNode3 = new Node('Metroville')
+  const testNode4 = new Node('Monstroplolis')
+  const testNode5 = new Node('Narnia')
+  const testNode6 = new Node('Naboo')
+
+  testGraph.addNode(testNode1)
+  testGraph.addNode(testNode2)
+  testGraph.addNode(testNode3)
+  testGraph.addNode(testNode4)
+  testGraph.addNode(testNode5)
+  testGraph.addNode(testNode6)
+
+  testGraph.addEdge(testNode1,testNode2)
+  testGraph.addEdge(testNode2,testNode3)
+  testGraph.addEdge(testNode2,testNode4)
+  testGraph.addEdge(testNode3,testNode4)
+  testGraph.addEdge(testNode3,testNode5)
+  testGraph.addEdge(testNode3,testNode6)
+  testGraph.addEdge(testNode4,testNode6)
+  testGraph.addEdge(testNode5,testNode6)
+
+  it('Graph size is', () => {
+    expect(testGraph.size()).toEqual(6)
   })
   it('A collection of all nodes can be properly retrieved from the graph', () => {
-    const result = [{"value": 1},{"value": 2}]
+    const result = [{"value": 'Pandora'},{"value": 'Arendelle'},{"value": 'Metroville'},{"value": 'Monstroplolis'},{"value": 'Narnia'},{"value": 'Naboo'}]
     expect(testGraph.getNodes()).toEqual(result)
   })
-  it('All appropriate neighbors can be retrieved from the graph', () => {
-    const neighbors = [{"node": {"value": 2},"weight": 1}]
-    expect(testGraph.getNeighbors(testNode)).toEqual(neighbors)
-  })
-  it('Neighbors are returned with the weight between nodes included', () => {
-    expect(testGraph.getNeighbors(testNode)[0].weight).toEqual(1)
-  })
-  it('The proper size is returned, representing the number of nodes in the graph', () => {
-    expect(testGraph.size()).toEqual(2)
-  })
-  it('A graph with only one node and edge can be properly returned', () => {
-    const singleGraph = new Graph
-    const singleNode = new Node(1)
-    const singleEdge = new Edge(singleNode)
-    singleGraph.addNode(singleNode)
-    expect(singleGraph.adjacencyList.has(singleNode)).toBeTruthy()
-  })
-  it('An empty graph properly returns null', () => {
-    const nullGraph = new Graph
-    expect(nullGraph.getNeighbors()).toEqual('node does not exist in Graph')
+  it('Abreadth first traversal runs list of nodes in BFT order', () => {
+    const orderBFT = 'Pandora, Arendelle, Metroville, Monstroplolis, Narnia, Naboo'
+    expect(testGraph.breadthFirst(testNode1)).toEqual(orderBFT)
   })
 })

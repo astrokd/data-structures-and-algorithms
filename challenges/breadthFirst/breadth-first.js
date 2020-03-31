@@ -94,15 +94,22 @@ class Graph{
 
   //Breadth First Traversal
   breadthFirst(node) {
-    let nodes = new Set()
+    let nodes = new Set() // keep visited node list here
     let breadth = new Queue
     breadth.enqueue(node)
-
-    while (!breadth.isEmpty) {
+    
+    while (!breadth.isEmpty()) {
       let front = breadth.dequeue()
       nodes.add(front)
+      let list = this.getNeighbors(front)
+      console.log('list',list)
+      list.forEach(child => {
+        if(!nodes.has(child))
+        nodes.add(child)
+        breadth.enqueue(child)
+      })
+      console.log('breadthFirst',breadth.peek())
 
-      
     }
 
     return [... nodes.keys()]
