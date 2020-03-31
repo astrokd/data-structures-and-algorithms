@@ -19,7 +19,9 @@ class Graph{
 
   //AddNode to the Map obj of the graph
   addNode(node){
-    if (!this.adjacencyList.has(node)) this.adjacencyList.set(node, []);
+    if (!this.adjacencyList.has(node)) {
+      return this.adjacencyList.set(node, []);
+    }
   }
 
   //AddEdge 
