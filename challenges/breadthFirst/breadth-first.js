@@ -97,23 +97,24 @@ class Graph{
     let nodes = new Set() // keep visited node list here
     let breadth = new Queue
     breadth.enqueue(node)
+    nodes.add(node)
     
     while (!breadth.isEmpty()) {
       let front = breadth.dequeue()
-      nodes.add(front)
       let list = this.getNeighbors(front)
-      console.log('list',list)
+      // console.log('list',list)
       list.forEach(child => {
-        if(!nodes.has(child)) {
-          nodes.add(child)
-          breadth.enqueue(child)
+        // console.log('ch')
+        if(!nodes.has(child.node)) {
+          nodes.add(child.node)
+          breadth.enqueue(child.node)
         }
       })
-      console.log('breadthFirst',breadth.peek())
+      // console.log('breadthFirst',breadth.peek())
 
     }
-
-    return [... nodes.keys()]
+    
+    return [... nodes.keys()].map(node => node.value)
   }
 
 }

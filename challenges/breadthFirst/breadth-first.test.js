@@ -34,7 +34,7 @@ describe('Breadth First Traversal for a graph', () => {
     expect(testGraph.getNodes()).toEqual(result)
   })
   it('Abreadth first traversal runs list of nodes in BFT order', () => {
-    const orderBFT = 'Pandora, Arendelle, Metroville, Monstroplolis, Narnia, Naboo'
+    const orderBFT = ['Pandora', 'Arendelle', 'Metroville', 'Monstroplolis', 'Narnia', 'Naboo']
     expect(testGraph.breadthFirst(testNode1)).toEqual(orderBFT)
   })
 })
