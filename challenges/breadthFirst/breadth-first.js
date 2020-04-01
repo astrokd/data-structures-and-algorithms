@@ -104,9 +104,10 @@ class Graph{
       let list = this.getNeighbors(front)
       console.log('list',list)
       list.forEach(child => {
-        if(!nodes.has(child))
-        nodes.add(child)
-        breadth.enqueue(child)
+        if(!nodes.has(child)) {
+          nodes.add(child)
+          breadth.enqueue(child)
+        }
       })
       console.log('breadthFirst',breadth.peek())
 
