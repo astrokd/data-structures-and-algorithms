@@ -92,7 +92,7 @@ class Graph{
     let result = false
     const neighbors = this.getNeighbors(node1)
     neighbors.forEach( neighbor => {
-      if (neighbor.value === node2.value) result = neighbor.weight
+      if (neighbor.node.value === node2.value) result = neighbor.weight
     })
 
     return result

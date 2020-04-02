@@ -37,4 +37,8 @@ describe('Breadth First Traversal for a graph', () => {
     const output = testGraph.getEdge(testNode1,testNode2)
     expect(output).toEqual(150)
   })
+  it('Get edge returns false when nodes do not have an edge', () => {
+    const output = testGraph.getEdge(testNode1,testNode6)
+    expect(output).toEqual(false)
+  })
 })
