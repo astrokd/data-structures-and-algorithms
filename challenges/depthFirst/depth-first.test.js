@@ -38,12 +38,12 @@ describe('Depth First Traversal for a graph', () => {
     expect(testGraph.getNodes()).toEqual(nodeOutput)
   })
   it('Graph getNeighbors returns', () => {
-    const neighborOutput = [{"node": {"value": "A"}, "weight": 1}, {"node": {"value": "E"}, "weight": 1}, {"node": {"value": "H"}, "weight": 1}, {"node": {"value": "F"}, "weight": 1}, {"node": {"value": "B"}, "weight": 1}]
-    expect(testGraph.getNeighbors(testNodeD)).toEqual(neighborOutput)
+    const neighborOutput = [{"node": {"value": "B"}, "weight": 1}, {"node": {"value": "D"}, "weight": 1}]
+    expect(testGraph.getNeighbors(testNodeA)).toEqual(neighborOutput)
   })
   it('Depth First traversal returns correct order', () => {
     const adjacencyList = testGraph.adjacencyList
-    const rootNode = [...adjacencyList][0]
+    const rootNode = testNodeA
     const input = testGraph.depthFirst(rootNode)
     const output = 'A,B,C,G,D,E,H,F'
     expect(input).toEqual(output)

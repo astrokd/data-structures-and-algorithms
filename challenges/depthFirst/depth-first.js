@@ -133,10 +133,10 @@ class Graph{
     let stack = []
     let visitedSet = new Set()
     stack.push(node)
-    console.log('stack',stack[0][0])
+    console.log('stack',stack[0])
     while (stack[0]) {
       if (!visitedSet.has(stack[0])) {
-        visitedSet.add(stack[0][0])
+        visitedSet.add(stack[0])
       }
       let popStack = stack.pop()
       console.log('popStack',Object.values(popStack)[0])
@@ -150,7 +150,7 @@ class Graph{
         })
       }
     }
-  return [...visitedSet.keys()]
+  return [...visitedSet]
  }
 
 }
