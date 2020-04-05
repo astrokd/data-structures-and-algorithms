@@ -82,7 +82,7 @@ class Graph{
   //GetNeighbors
   getNeighbors(node) {
     if (!this.adjacencyList.has(node)){
-      return 'node does not exist in Graph'
+      return []
     }
     return this.adjacencyList.get(node)
   }
@@ -127,6 +127,31 @@ class Graph{
     
     return [... nodes.keys()].map(node => node.value)
   }
+
+  //Depth First Traversal
+  depthFirst(node) {
+    let stack = []
+    let visitedSet = new Set()
+    stack.push(node)
+    console.log('stack',stack[0][0])
+    while (stack[0]) {
+      if (!visitedSet.has(stack[0])) {
+        visitedSet.add(stack[0][0])
+      }
+      let popStack = stack.pop()
+      console.log('popStack',Object.values(popStack)[0])
+      const neighbors = this.getNeighbors(Object.values(popStack)[0])
+      if (neighbors.length > 0) {
+        console.log('neighbors',neighbors)
+        neighbors.forEach(edge => {
+          if (!visitedSet.has(edge.node)) {
+            stack.push(edge.node)
+          }
+        })
+      }
+    }
+  return [...visitedSet.keys()]
+ }
 
 }
 

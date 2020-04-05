@@ -11,13 +11,15 @@ Create a function that accepts an adjacency list as a graph, and conducts a dept
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
 
 INPUT:
-            (A)----(D)----(F)
+```
+            {A}----(D)----(F)
               \   / | \   /
                (B)  |  (H)
               /    (E)
             (C)
               \
               (G)
+```
 OUTPUT:
  `A,B,C,G,D,E,H,F`
 
@@ -33,30 +35,35 @@ OUTPUT:
 Psuedo code
 ```
 Declare depthFirst(rootNode)
-  result = ''
+  // the stack to help traverse the graph
   stack = []
+  // a Set object to keep track of the nodes and return when done
   visitedSet = Set object
+  // push the first node on to the stack
   stack.push(rootNode)
-
-  while (stack[0]) 
+  // loop over the stack until it is empty
+  while (stack[0])
+    // check if the current node has already been visited
     if (!visitedSet.has(stack[0])) {
+      // if it has not add to stack
       visitedSet.add(stack[0])
     }
-    define neighbors = getNeighbors(stack[0])
+    // place array of adjacent nodes in variable and pop node off stack
+    define neighbors = getNeighbors(stack.pop())
+    // check if adjacent node array is empty 
     if (neighbors.length > 0) {
+      // array has a length loop through it
       neighbors.forEach(edge => {
+        // check if the current node has already been visited
         if (!visitedSet.has(edge.node)) {
+          // if it has not add to stack
           stack.push(edge.node)
-          visitedSet.add(rootNode)
-        } else {
-          
         }
-
       })
     }
 
   })
-  return result
+  return visitedSet
 ```
 
 ## API
