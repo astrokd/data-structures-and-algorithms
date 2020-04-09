@@ -18,7 +18,7 @@ CodeFellows 401 Challenges
  - [ ] Class 17 : ??? : [pull request] : [README]
  - [ ] Class 18 : ??? : [pull request] : [README]
  - [ ] Class 19 : ??? : [pull request] : [README]
- - [ ] Class 26 : ??? : [pull request] : [README]
+ - [x] Class 26 : Insertion Sort : [pull request](https://github.com/astrokd/data-structures-and-algorithms/pull/49) : [README](https://github.com/astrokd/data-structures-and-algorithms/tree/master/challenges/insertSort)
  - [ ] Class 27 : ??? : [pull request] : [README]
  - [ ] Class 28 : ??? : [pull request] : [README]
  - [ ] Class 29 : ??? : [pull request] : [README]
