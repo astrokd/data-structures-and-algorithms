@@ -16,7 +16,7 @@ CodeFellows 401 Challenges
  - [x] Class 17 : Breadth First Binary Tree : [pull request](https://github.com/astrokd/data-structures-and-algorithms/pull/45) : [README](https://github.com/astrokd/data-structures-and-algorithms/blob/master/challenges/BinaryTree/README.md)
  - [x] Class 16 : FizzBuzz Tree 2.0 : [pull request](https://github.com/astrokd/data-structures-and-algorithms/pull/46) : [README](https://github.com/astrokd/data-structures-and-algorithms/blob/master/challenges/fizzBuzzTree/README.md)
  - [ ] Class 17 : ??? : [pull request] : [README]
- - [ ] Class 18 : Maximum value in a binary tree : [pull request](https://github.com/astrokd/data-structures-and-algorithms/pull/47) : [README]
+ - [ ] Class 18 : Maximum value in a binary tree : [pull request](https://github.com/astrokd/data-structures-and-algorithms/pull/47) : [README](https://github.com/astrokd/data-structures-and-algorithms/blob/master/challenges/FindMaxBinaryTree/README.md)
  - [ ] Class 19 : ??? : [pull request] : [README]
  - [x] Class 26 : Insertion Sort : [pull request](https://github.com/astrokd/data-structures-and-algorithms/pull/49) : [README](https://github.com/astrokd/data-structures-and-algorithms/tree/master/challenges/insertSort)
  - [ ] Class 27 : ??? : [pull request] : [README]
