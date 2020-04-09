@@ -19,7 +19,7 @@ CodeFellows 401 Challenges
  - [x] Class 18 : Maximum value in a binary tree : [pull request](https://github.com/astrokd/data-structures-and-algorithms/pull/47) : [README](https://github.com/astrokd/data-structures-and-algorithms/blob/master/challenges/FindMaxBinaryTree/README.md)
  - [x] Class 26 : Insertion Sort : [pull request](https://github.com/astrokd/data-structures-and-algorithms/pull/49) : [README](https://github.com/astrokd/data-structures-and-algorithms/tree/master/challenges/insertSort)
  - [x] Class 27 : Merge Sort : [pull request](https://github.com/astrokd/data-structures-and-algorithms/pull/50) : [README](https://github.com/astrokd/data-structures-and-algorithms/blob/master/challenges/mergeSort/README.md)
- - [ ] Class 28 : ??? : [pull request] : [README]
+ - [x] Class 28 : Quick Sort : [pull request](https://github.com/astrokd/data-structures-and-algorithms/pull/51) : [README](https://github.com/astrokd/data-structures-and-algorithms/blob/master/challenges/quickSort/README.md)
  - [ ] Class 29 : ??? : [pull request] : [README]
  - [x] Class 31 : Repeat First Word : [pull request](https://github.com/astrokd/data-structures-and-algorithms/pull/52) : [README](https://github.com/astrokd/data-structures-and-algorithms/blob/master/challenges/repeatedWord/README.md)
  - [ ] Class 32 : ??? : [pull request] : [README]
