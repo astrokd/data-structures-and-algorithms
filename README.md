@@ -26,4 +26,4 @@ CodeFellows 401 Challenges
  - [x] Class 35 : Graphs : [pull request](https://github.com/astrokd/data-structures-and-algorithms/pull/55) : [README](https://github.com/astrokd/data-structures-and-algorithms/blob/master/challenges/graph/README.md)
  - [x] Class 36 : Graphs:Breadth First : [pull request](https://github.com/astrokd/data-structures-and-algorithms/pull/56) : [README](https://github.com/astrokd/data-structures-and-algorithms/blob/master/challenges/breadthFirst/README.md)
  - [x] Class 37 : Graphs:Get Edges : [pull request](https://github.com/astrokd/data-structures-and-algorithms/pull/57) : [README](https://github.com/astrokd/data-structures-and-algorithms/blob/master/challenges/getEdge/README.md)
- - [ ] Class 0X : ??? : [pull request] : [README]
+ - [x] Class 38 : Graphs:Depth First : [pull request](https://github.com/astrokd/data-structures-and-algorithms/pull/58) : [README](https://github.com/astrokd/data-structures-and-algorithms/blob/master/challenges/depthFirst/README.md)
