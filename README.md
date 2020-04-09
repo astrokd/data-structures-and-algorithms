@@ -20,10 +20,9 @@ CodeFellows 401 Challenges
  - [x] Class 26 : Insertion Sort : [pull request](https://github.com/astrokd/data-structures-and-algorithms/pull/49) : [README](https://github.com/astrokd/data-structures-and-algorithms/tree/master/challenges/insertSort)
  - [x] Class 27 : Merge Sort : [pull request](https://github.com/astrokd/data-structures-and-algorithms/pull/50) : [README](https://github.com/astrokd/data-structures-and-algorithms/blob/master/challenges/mergeSort/README.md)
  - [x] Class 28 : Quick Sort : [pull request](https://github.com/astrokd/data-structures-and-algorithms/pull/51) : [README](https://github.com/astrokd/data-structures-and-algorithms/blob/master/challenges/quickSort/README.md)
- - [ ] Class 29 : ??? : [pull request] : [README]
  - [x] Class 31 : Repeat First Word : [pull request](https://github.com/astrokd/data-structures-and-algorithms/pull/52) : [README](https://github.com/astrokd/data-structures-and-algorithms/blob/master/challenges/repeatedWord/README.md)
- - [ ] Class 32 : ??? : [pull request] : [README]
- - [ ] Class 33 : ??? : [pull request] : [README]
+ - [x] Class 32 : Tree Intersection : [pull request](https://github.com/astrokd/data-structures-and-algorithms/pull/53) : [README](https://github.com/astrokd/data-structures-and-algorithms/tree/master/challenges/treeIntersection)
+ - [x] Class 33 : Left Join : [pull request](https://github.com/astrokd/data-structures-and-algorithms/pull/54) : [README](https://github.com/astrokd/data-structures-and-algorithms/blob/master/challenges/leftJoin/README.md)
  - [ ] Class 34 : ??? : [pull request] : [README]
  - [x] Class 36 : Graphs : [pull request](https://github.com/astrokd/data-structures-and-algorithms/pull/55) : [README]
  - [ ] Class 0X : ??? : [pull request] : [README]
