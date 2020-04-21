@@ -16,4 +16,4 @@ Create a Queue class that has a front has methods enqueue, dequeue, peek, and is
 
 
 - [PR for Stacks and Queues as an Array](https://github.com/astrokd/data-structures-and-algorithms/pull/39)
-- [PR for Stacks and Queues as a Linked List]()
+- [PR for Stacks and Queues as a Linked List](https://github.com/astrokd/data-structures-and-algorithms/pull/40)

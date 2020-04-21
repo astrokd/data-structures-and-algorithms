@@ -11,6 +11,7 @@ Write a function based on the specifications above, which takes in a graph, and 
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
 
 ### Algorithm
+```
 Declare getEdge(nodeStart,nodeDestination)
   define result = false
   define directNeighbor <-- getNeighbors(nodeStart)
@@ -19,7 +20,7 @@ Declare getEdge(nodeStart,nodeDestination)
       result <-- neighbor.weight
   })
   return result
-
+```
 
 ## API
 <!-- Description of each method publicly available in your Graph -->
