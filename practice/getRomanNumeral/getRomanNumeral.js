@@ -31,6 +31,7 @@ const input4 = 99  // XCIX
 const input5 = 90  // XC
 const input6 = 19  // XIX
 const input7 = 5  // V
+const input8 = 4942  // MMMMCMXLII
 
 console.log('159 == CLIX',getRomanNumeral(input1))
 console.log('129 == CXXIX',getRomanNumeral(input2))
@@ -39,3 +40,4 @@ console.log('99 == XCIX',getRomanNumeral(input4))
 console.log('90 == XC',getRomanNumeral(input5))
 console.log('19 == XIX',getRomanNumeral(input6))
 console.log('5 == V',getRomanNumeral(input7))
+console.log('4942 == MMMMCMXLII',getRomanNumeral(input8))
