@@ -52,6 +52,7 @@ length = 3
 3  3  m
 
 ## Pseudo Code
+```
 DECLARE getRomanNumeral (interger)
   define array <== interger.toString().split('')
   define output <== ''
@@ -65,6 +66,7 @@ DECLARE getRomanNumeral (interger)
       output += romanNumeral.values(value)
   
   return output
+```
 
 3490
 '3490'
@@ -79,7 +81,7 @@ value = 9 * 1 = 90
 output = 'MMMCDXC'
 
 ## CODE
-
+```js
 let getRomanNumeral = (interger) => {
   let array = interger.toString().split('')
   let output = ''
@@ -95,6 +97,7 @@ let getRomanNumeral = (interger) => {
   })
   return output
 }
+```
 
 ## Big O
 
