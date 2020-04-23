@@ -8,6 +8,8 @@ class Node {
 class LinkedList {
     constructor(head = null) {
       this.head = head;
+      this.tail = tail;
+      this.length = 0;
     }
 
     append(node) {
