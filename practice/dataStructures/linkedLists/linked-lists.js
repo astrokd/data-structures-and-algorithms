@@ -2,13 +2,14 @@ class Node {
     constructor(value, next = null) {
       this.value = value;
       this.next = next;
+      this.previous = null
     }
 }
-  
+
 class LinkedList {
     constructor(head = null) {
       this.head = head;
-      this.tail = tail;
+      this.tail = null;
       this.length = 0;
     }
 
