@@ -12,6 +12,7 @@
   "license": "MIT",
   "dependencies": {},
   "devDependencies": {
+    "minimist": ">=1.2.3",
     "jest": "^24.9.0"
   }
 }
