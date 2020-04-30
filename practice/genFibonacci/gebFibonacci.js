@@ -27,13 +27,13 @@
  */
 
 let getFibonacciInt = (number) => {
-  let fibSeq = [0,1,1,2]
+  let fibSeq = [0,1]
   // console.log('start fibSeq',fibSeq)
   let value = 0
   let i = 0
   let j = 1
-  if (number <= 4) return fibSeq[number-1]
-  for (let idx = 4; idx <= number-1 ;idx++) {
+  if (number <= 2) return fibSeq[number-1]
+  for (let idx = 2; idx <= number-1 ;idx++) {
     // console.log('idx',idx)
     i = idx-2
     j = idx-1
