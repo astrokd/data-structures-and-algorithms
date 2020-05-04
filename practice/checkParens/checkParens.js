@@ -64,10 +64,48 @@ let checkParens = (string) => {
       array.push(string[i])
     } 
   }
-
+  if (array.length > 0) return false
   return true
 }
 
 console.log('check parens1: true; ', checkParens('([{}])'))
 console.log('check parens2: false; ', checkParens('[(])'))
+console.log('check parens2b: false; ', checkParens('[()]{'))
 console.log('check parens3: true; ', checkParens('[(())]([]){{[]}}'))
+
+let checkParensMap = (string) => {
+  let array = []
+  let map = new Map()
+  const length = string.length
+
+  map.set(')','(')
+  map.set(']','[')
+  map.set('}','{')
+
+  if (map.has(string[0])) {
+    return false
+  } else {
+    array.push(string[0])
+  }
+  
+  for (let i = 1; i < length; i++) {
+    if (map.has(string[i])) {
+      if (array[array.length-1] !== map.get(string[i])) {
+        return false
+      } else {
+        array.pop()
+      }
+    }
+    
+    if (string[i] === '(' || string[i] === '[' || string[i] === '{' ) {
+      array.push(string[i])
+    } 
+  }
+  if (array.length > 0) return false
+  return true
+}
+
+console.log('check parens map1: true; ', checkParensMap('([{}])'))
+console.log('check parens map2: false; ', checkParensMap('[(])'))
+console.log('check parens map2b: false; ', checkParensMap('[()]{'))
+console.log('check parens map3: true; ', checkParensMap('[(())]([]){{[]}}'))
