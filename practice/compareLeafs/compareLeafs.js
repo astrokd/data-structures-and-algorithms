@@ -46,8 +46,8 @@ let compareLeafs = (tree1,tree2) => {
   compareLeafHelper(tree2.root)
   let count2 = count
 
-  console.log('count1', count1)
-  console.log('count2', count2)
+  // console.log('count1', count1)
+  // console.log('count2', count2)
 
   if (count1 !== count2) {
     return false
@@ -119,5 +119,36 @@ rootNode2.right = right2
 const testTree2 = new BinaryTree()
 testTree2.root = rootNode2
 
+// Tree3
+const rootNode3 = new Node('F')
+const left3 = new Node('F1')
+const right3 = new Node('F1')
 
-console.log('compare trees', compareLeafs(testTree1,testTree2))  //true
+const A3F2 = new Node('A3F2')
+const B3F2 = new Node('B3F2')
+const C3F3 = new Node('C3F3')
+const L36 = new Node('L6')
+const L38 = new Node('L8')
+const L39 = new Node('L9')
+
+
+C3F3.left = L39
+
+A3F2.left = L36
+
+B3F2.left = L38
+B3F2.right = C3F3
+
+left3.left = A3F2
+
+right3.right = B3F2
+
+rootNode3.left = left3
+rootNode3.right = right3
+
+const testTree3 = new BinaryTree()
+testTree3.root = rootNode3
+
+
+console.log('compare trees 1 n 2', compareLeafs(testTree1,testTree2))  //true
+console.log('compare trees 1 n 3', compareLeafs(testTree1,testTree3))  //false
