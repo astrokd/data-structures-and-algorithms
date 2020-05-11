@@ -13,17 +13,62 @@ class LinkedList {
       this.length = 0;
     }
 
-    append(node) {
-        let current = this.head;
-        while(current.next !== null) {
-            current = current.next;
+    push(value) {
+        let newNode = new Node(value)
+        if(this.length === 0){
+            this.head = newNode
+            this.tail = newNode
+        } else {
+            this.tail.next = newNode
+            newNode.previous = this.tail
+            this.tail = newNode
         }
-        current.next = node;
+        this.length++
+        return this
     }
 
-    insert(value) {
-        const newHead = new Node(value, this.head);
-        this.head = newHead;
+    pop(){
+        if(!this.head) return undefined
+        let poppedNode = this.tail
+        if(this.length === 1) {
+            this.head = null
+            this.tail = null
+        } else {
+            this.tail = poppedNode.previous
+            this.tail.next = null
+            poppedNode.prev = null
+        }
+        this.length--
+        return poppedNode
+    }
+
+    append(value) {
+        let newNode = new Node(value)
+        if(this.length === 0) {
+            this.head = newNode
+            this.tail = newNode
+        } else {
+            this.head.prev = newNode
+            newNode.next = this.head
+            this.head = newNode
+        }
+        this.length++
+        return this
+    }
+
+    shift() {
+        if(this.length === 0) return undefined
+        let oldHead = this.head
+        if(this.length === 1) {
+            this.head = null
+            this.tail = null
+        } else {
+            this.head = oldHead.next
+            this.head.prev = null
+            oldHead.next = null
+        }
+        this.length--
+        return oldHead
     }
 
 }
