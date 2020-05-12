@@ -13,7 +13,7 @@ class LinkedList {
       this.length = 0;
     }
 
-    push(value) {
+    push(value) {  // AKA addToEnd
         let newNode = new Node(value)
         if(this.length === 0){
             this.head = newNode
@@ -27,7 +27,7 @@ class LinkedList {
         return this
     }
 
-    pop(){
+    pop(){ // AKA removeFromEnd
         if(!this.head) return undefined
         let poppedNode = this.tail
         if(this.length === 1) {
@@ -42,7 +42,7 @@ class LinkedList {
         return poppedNode
     }
 
-    append(value) {
+    unshift(value) {  // AKA addToFront
         let newNode = new Node(value)
         if(this.length === 0) {
             this.head = newNode
@@ -56,7 +56,7 @@ class LinkedList {
         return this
     }
 
-    shift() {
+    shift() {  // AKA removeFromFront
         if(this.length === 0) return undefined
         let oldHead = this.head
         if(this.length === 1) {
