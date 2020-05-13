@@ -66,3 +66,60 @@ describe('linked-list shift', () => {
       expect(ll.tail.value).toEqual(2);
   });
 });
+
+describe('linked-list get', () => {
+  test('should return the item at index', () => {
+      const one = new Node(1);
+      const two = new Node(2);
+      const three = new Node(3);
+      one.next = two;
+      two.previous = one
+      two.next = three;
+      three.previous = two
+      const ll = new LinkedList(one);
+      ll.length = 3
+      ll.tail = three
+      const result = ll.get(1)
+      expect(result.value).toEqual(2)
+      expect(result.previous.value).toEqual(1)
+      expect(result.next.value).toEqual(3)
+  });
+});
+
+describe('linked-list remove', () => {
+  test('should return the item at index and remove it', () => {
+      const one = new Node(1);
+      const two = new Node(2);
+      const three = new Node(3);
+      one.next = two;
+      two.previous = one
+      two.next = three;
+      three.previous = two
+      const ll = new LinkedList(one);
+      ll.length = 3
+      ll.tail = three
+      const result = ll.remove(1)
+      expect(result.value).toEqual(2)
+      expect(ll.head.next.value).toEqual(3)
+      expect(ll.tail.previous.value).toEqual(1)
+  });
+});
+
+describe('linked-list insert', () => {
+  test('should insert the value at the index', () => {
+      const one = new Node(1);
+      const two = new Node(2);
+      const three = new Node(3);
+      one.next = two;
+      two.previous = one
+      two.next = three;
+      three.previous = two
+      const ll = new LinkedList(one);
+      ll.length = 3
+      ll.tail = three
+      const result = ll.insert(1,2.5)
+      expect(result).toEqual(true)
+      expect(ll.head.next.value).toEqual(2.5)
+      expect(ll.tail.previous.previous.value).toEqual(2.5)
+  });
+});
