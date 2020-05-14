@@ -64,7 +64,7 @@ class LinkedList {
             this.tail = null
         } else {
             this.head = oldHead.next
-            this.head.previous = null
+            // this.head.previous = null
             oldHead.next = null
         }
         this.length--
@@ -94,6 +94,7 @@ class LinkedList {
 
     remove(index) {
         if(index < 0 || index >= this.length) return undefined
+        this.length--
         if(index === 0) return this.shift()
         if(index === this.length - 1) return this.pop()
 
