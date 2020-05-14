@@ -65,6 +65,21 @@ describe('linked-list shift', () => {
       expect(ll.head.value).toEqual(2);
       expect(ll.tail.value).toEqual(2);
   });
+  test('should return empty lined list', () => {
+      const one = new Node(1);
+      const two = new Node(2);
+      one.next = two;
+      two.previous = one
+      const ll = new LinkedList(one);
+      ll.length = 2
+      ll.tail = two
+      const shiftedItem1 = ll.shift();
+      const shiftedItem2 = ll.shift();
+      expect(shiftedItem1.value).toEqual(1)
+      expect(shiftedItem2.value).toEqual(2)
+      expect(ll.head).toEqual(null);
+      expect(ll.tail).toEqual(null);
+  });
 });
 
 describe('linked-list get', () => {
