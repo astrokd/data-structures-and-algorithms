@@ -42,7 +42,7 @@ class LinkedList {
         return poppedNode
     }
 
-    unshift(value) {  // AKA addToFront
+    unshift(value) {  // AKA addToFront, append
         let newNode = new Node(value)
         if(this.length === 0) {
             this.head = newNode
