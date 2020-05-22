@@ -44,6 +44,21 @@ let reverseLListRec = (linkedList) => {
   return resultLL
 }
 
+let reverseList = (head) => {
+  if (!head) return head
+  let node = new Node()
+  let current = head
+
+  while(current) {
+    const currentVal = current.value
+    const newNode = new Node(currentVal)
+    newNode.next = node
+    node = newNode
+    current = current.next
+  }
+  return node
+}
+
 const one = new Node(1);
 const two = new Node(2);
 const three = new Node(3);
@@ -68,3 +83,6 @@ ll.tail = eee
 
 console.log('reverse LL Int',reverseLListInt(ll))
 console.log('reverse LL Rec',reverseLListRec(ll))
+const result = reverseList(one)
+console.log('reverse List',result)
+console.log('reverse List next next next next',result.next.next.next.next)
