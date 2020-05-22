@@ -45,6 +45,7 @@ let reverseLListRec = (linkedList) => {
 }
 
 let reverseList = (head) => {
+  if (!head) return head
   let node = new Node()
   let current = head
 
