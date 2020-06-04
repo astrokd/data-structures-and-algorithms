@@ -1,23 +1,28 @@
+// https://www.codewars.com/kata/5262119038c0985a5b00029f/train/javascript
+// https://stackoverflow.com/questions/40200089/number-prime-test-in-javascript#:~:text=function%20isPrime(num)%20%7B%20if,return%20false%3B%20%7D%20%7D%20console.
+
 function isPrime(num) {
+  // prime numbers are greater than 1
+  if (num <= 1) return false
+
   // define starter list of prime numbers
   const primes = [2,3,5,7,11,13,17,19,23]
   // place list in a a Set Object
   let primeSet = new Set(primes)
-  // check for prime
-  // greater than 1
-  if (num > 1) {
-    // in my defined list
-    if (primeSet.has(num)) return true
-    // not even
-    if (num%2 === 1) {
-      // divisable by a prime number in my list
-      for (let p of primeSet) {
-        if (num%p === 0) return false
-      }
-      // calculate primes after last prime in list and check if modulus === 0
-
-    } else { return false }
-  } else { return false }
+  // in my defined list
+  if (primeSet.has(num)) return true
+  // prime numbers are not divisable by a prime number in my list
+  for (let p of primeSet) {
+    if (num%p === 0) return false
+  }
+  /* prime numbers are only diviable but 1 and them selves.
+   * calculate primes after last prime in list and 
+   * check if modulus === 0
+   */
+  for(let i = primes[primes.length-1]+1; i <= Math.sqrt(num); i++) {
+    if(num%i === 0) return false
+  }
+  // if 
   return true
 }
 
