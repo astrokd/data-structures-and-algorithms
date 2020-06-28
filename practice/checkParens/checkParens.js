@@ -76,6 +76,7 @@ console.log('check parens3: true; ', checkParens('[(())]([]){{[]}}'))
 let checkParensMap = (string) => {
   let array = []
   let map = new Map()
+  let set = new Set(['(','[','{'])
   const length = string.length
 
   map.set(')','(')
@@ -97,7 +98,7 @@ let checkParensMap = (string) => {
       }
     }
     
-    if (string[i] === '(' || string[i] === '[' || string[i] === '{' ) {
+    if (set.has(string[i])) {
       array.push(string[i])
     } 
   }

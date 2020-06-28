@@ -10,7 +10,7 @@ describe('Instantiate empty tree', () => {
 })
 
 //Instantiate a tree with a single root node
-describe('Instantiate  a tree with a single root node', () => {
+describe('Instantiate a tree with a single root node', () => {
   const testTree = new BinaryTree
   const testNode = new Node('A')
   testTree.root = testNode
@@ -35,6 +35,14 @@ describe('Instantiate a tree with a root, a left, and a right', () => {
     expect(testTree.root.right.value).toEqual('C')
   })
 })
+
+/* Tree Structure
+ * testTree:       A
+ *               /   \
+ *              B     C
+ *             / \   / 
+ *            D   E F
+ */
 
 //return a collection of preorder traversal
 describe('Preorder Traversal', () => {
@@ -61,6 +69,13 @@ describe('Preorder Traversal', () => {
   })
 })
 
+/* Tree Structure
+ * testTree:       A
+ *               /   \
+ *              B     C
+ *             / \   / 
+ *            D   E F
+ */
 //return a collection of inorder traversal
 describe('Inorder Traversal', () => {
   const testTree = new BinaryTree
@@ -86,6 +101,13 @@ describe('Inorder Traversal', () => {
   })
 })
 
+/* Tree Structure
+ * testTree:       A
+ *               /   \
+ *              B     C
+ *             / \   / 
+ *            D   E F
+ */
 //return a collection of postorder
 describe('Postorder Traversal', () => {
   const testTree = new BinaryTree
@@ -111,6 +133,13 @@ describe('Postorder Traversal', () => {
   })
 })
 
+/* Tree Structure
+ * testTree:       A
+ *               /   \
+ *              B     C
+ *             / \   / 
+ *            D   E F
+ */
 //return a collection of breadth first
 describe('Breadth FirstTraversal', () => {
   const testTree = new BinaryTree

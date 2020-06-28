@@ -91,7 +91,6 @@ class BinaryTree {
     let queueArr = [];
     queueArr.push(this.root.value)
 
-    
     return queueArr.length > 0 ? queueArr : null;
   }
 
