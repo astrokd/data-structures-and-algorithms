@@ -1,5 +1,6 @@
 # data-structures-and-algorithms
-CodeFellows 401 Challenges
+
+CodeFellows 401 Challenges - folder: `challenges`
 
  - [x] Class 01 : arrayReverse : [pull request](https://github.com/astrokd/data-structures-and-algorithms/pull/30) : [README](https://github.com/astrokd/data-structures-and-algorithms/blob/master/challenges/arrayReverse/README.md)
  - [x] Class 02 : arrayShift : [pull request update](https://github.com/astrokd/data-structures-and-algorithms/pull/32) : [README](https://github.com/astrokd/data-structures-and-algorithms/blob/master/challenges/arrayShift/README.md)
@@ -27,3 +28,21 @@ CodeFellows 401 Challenges
  - [x] Class 36 : Graphs:Breadth First : [pull request](https://github.com/astrokd/data-structures-and-algorithms/pull/56) : [README](https://github.com/astrokd/data-structures-and-algorithms/blob/master/challenges/breadthFirst/README.md)
  - [x] Class 37 : Graphs:Get Edges : [pull request](https://github.com/astrokd/data-structures-and-algorithms/pull/57) : [README](https://github.com/astrokd/data-structures-and-algorithms/blob/master/challenges/getEdge/README.md)
  - [x] Class 38 : Graphs:Depth First : [pull request](https://github.com/astrokd/data-structures-and-algorithms/pull/58) : [README](https://github.com/astrokd/data-structures-and-algorithms/blob/master/challenges/depthFirst/README.md)
+
+CodeFellows 301 Challenges - folder: `code-challenges`
+
+- 2darray
+- array-n-string
+- arrayShift
+- chaining
+- comboall
+- filter
+- for-each
+- map
+- object-inter
+- reduce
+- regex
+- regex2
+- sort
+- stringmanip
+- value-vs-reference
