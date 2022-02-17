@@ -10,9 +10,11 @@
   "keywords": [],
   "author": "",
   "license": "MIT",
-  "dependencies": {},
   "devDependencies": {
-    "minimist": ">=1.2.3",
-    "jest": "^24.9.0"
+    "jest": "^27.5.1",
+    "minimist": ">=1.2.3"
+  },
+  "dependencies": {
+    "lodash": "^4.17.19"
   }
 }
