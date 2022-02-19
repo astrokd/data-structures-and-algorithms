@@ -29,7 +29,7 @@ CodeFellows 401 Challenges - folder: `challenges`
  - [x] Class 37 : Graphs:Get Edges : [pull request](https://github.com/astrokd/data-structures-and-algorithms/pull/57) : [README](https://github.com/astrokd/data-structures-and-algorithms/blob/master/challenges/getEdge/README.md)
  - [x] Class 38 : Graphs:Depth First : [pull request](https://github.com/astrokd/data-structures-and-algorithms/pull/58) : [README](https://github.com/astrokd/data-structures-and-algorithms/blob/master/challenges/depthFirst/README.md)
 
-CodeFellows 301 Challenges - folder: `code-challenges`
+CodeFellows 301 Challenges - folder: `code-challenges` - [README 301.md](https://github.com/astrokd/data-structures-and-algorithms/blob/master/README%20301.md)
 
 - 2darray
 - array-n-string
@@ -46,3 +46,28 @@ CodeFellows 301 Challenges - folder: `code-challenges`
 - sort
 - stringmanip
 - value-vs-reference
+
+Post CodeFellows code challenge practice - folder: `practice`
+
+- browserNav
+- checkAnagrams
+- checkBST
+- checkPalindrome
+- checkParens
+- codewars
+- compareLeafs
+- dataStructures
+- EeneyMeeney
+- genFibonacci
+- getMaxInStack
+- getRomanNumeral
+- highestProduct
+- leetcode
+- removeKthMember
+- reverseLList
+- reverseString3ways
+- sanitizeURL
+- sumMatrix
+- sumTree
+- treeLeafTotal
+- uniqueCharacters
