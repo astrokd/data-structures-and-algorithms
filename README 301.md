@@ -1,6 +1,6 @@
-# data-structures-and-algorithms
+# CodeFellows 301 Code Challenges
 
-CodeFellows 301 Code Challenges
+folder: `code-challenges`
 
 - 01 -- for-each ✅ (Array.forEach())
 - 02 -- value-vs-Reference ✅ (Pass by Reference)
@@ -16,3 +16,5 @@ CodeFellows 301 Code Challenges
 - 12 -- 2darray ✅ (Two-Dimensional Arrays)
 - 13 -- stringmanip ✅ (.includes(), .every(), .charAt())
 - 14 -- comboall ✅ (Combination of Everything)
+
+[return to main README](https://github.com/astrokd/data-structures-and-algorithms/blob/master/README.md)
