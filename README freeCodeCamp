@@ -4,7 +4,14 @@
 - Folder: `freeCodeCamp`
 
 - Stacks
+  - Last in First out
+  - common functions: push, pop, peek, length/size
+  - examples
     - stacks-simple
     - stacks
+- Binary Search Tree (BST)
+- Hash Tables
+- Linked List
+- Graphs
 
 [return to main README](https://github.com/astrokd/data-structures-and-algorithms/blob/master/README.md)
