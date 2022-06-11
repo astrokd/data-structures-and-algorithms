@@ -16,6 +16,8 @@ folder: `practice`
 - getRomanNumeral
 - highestProduct
 - leetcode
+  - mergesortedarray
+  - Intersectionof2arrII
 - removeKthMember
 - reverseLList
 - reverseString3ways
