@@ -18,6 +18,10 @@ folder: `practice`
 - leetcode
   - mergesortedarray
   - Intersectionof2arrII
+  - validsudoku
+  - reshapematrix
+  - balancedSplitString
+  - maxBinaryTreeDepth
 - removeKthMember
 - reverseLList
 - reverseString3ways
