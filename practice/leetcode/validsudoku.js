@@ -1,5 +1,4 @@
 // https://leetcode.com/problems/valid-sudoku/
-
 /**
  * @param {character[][]} board
  * @return {boolean}
@@ -32,25 +31,30 @@
 var isValidSudoku = function(board) {
     let i = 0  // columns
     let j = 0  // rows
-    let k = 0  // each cell
+    let k = 1  // each cell
     const set = new Set()
 
-    // let helper = (input,r,s) => {
-    // }
-
-    while (k < 80) {  // check row for dups
-        const tmp = board[j][i]
+    let helper = (tmp) => {
         if (tmp != ".") {
             if (set.has(tmp)) {
-                return false
+                return true
             } else {
                 set.add(tmp)
             }  
         }
+    }
+
+    while (k < 82) {  // check row for dups
+        if (helper(board[j][i])) {
+            return false
+        }
+
+        if (k%9 == 0) { 
+            set.clear() 
+        }
         
         if (i == 8) {
             i=0
-            set.clear()
             j++
         } else {
             i++
@@ -58,23 +62,21 @@ var isValidSudoku = function(board) {
         
         k++
     }
-    k=0
+    k=1
     i=0
     j=0
     set.clear()
-    while (k < 80) {  // check column for dups
-        const tmp = board[j][i]
-        if (tmp != ".") {
-            if (set.has(tmp)) {
-                return false
-            } else {
-                set.add(tmp)
-            }  
+    while (k < 82) {  // check column for dups
+        if (helper(board[j][i])) {
+            return false
+        }
+
+        if (k%9 == 0) { 
+            set.clear() 
         }
         
         if (j == 8) {
             i++
-            set.clear()
             j=0
         } else {
             j++
@@ -87,14 +89,9 @@ var isValidSudoku = function(board) {
     j=0
     set.clear()
     // check cubes for dups
-    while (k < 81) {  
-        const tmp = board[j][i]
-        if (tmp != ".") {
-            if (set.has(tmp)) {
-                return false
-            } else {
-                set.add(tmp)
-            }  
+    while (k < 82) {  
+        if (helper(board[j][i])) {
+            return false
         }
         
         if (j == 2 || j == 5 || j == 8 ) {
@@ -103,14 +100,17 @@ var isValidSudoku = function(board) {
         } else {
             j++
         }
-        if (k%9 == 0) { set.clear() }
+        if (k%9 == 0) { 
+            // console.log("set clear")
+            set.clear() 
+        }
 
         if (k == 27) { 
             j=3
             i=0
         }
         if (k == 54) { 
-            j=5
+            j=6
             i=0
         }
         
@@ -131,3 +131,27 @@ const b1 = [["5","3",".",".","7",".",".",".","."]
            ,[".",".",".",".","8",".",".","7","9"]]
 
 console.log("isValidSudoku:",isValidSudoku(b1))
+
+const b2 = [[".",".","5",".",".",".",".",".","6"]
+           ,[".",".",".",".","1","4",".",".","."]
+           ,[".",".",".",".",".",".",".",".","."]
+           ,[".",".",".",".",".","9","2",".","."]
+           ,["5",".",".",".",".","2",".",".","."]
+           ,[".",".",".",".",".",".",".","3","."]
+           ,[".",".",".","5","4",".",".",".","."]
+           ,["3",".",".",".",".",".","4","2","."]
+           ,[".",".",".","2","7",".","6",".","."]]
+
+console.log("isValidSudoku:",isValidSudoku(b2))
+
+const b3 = [["1","2",".",".",".",".","6",".","7"]
+           ,[".",".",".",".",".",".",".",".","5"]
+           ,[".",".","9",".","6",".","4",".","."]
+           ,[".","6",".",".",".",".",".",".","."]
+           ,[".",".",".",".","4",".",".","7","."]
+           ,[".",".",".",".",".",".",".",".","."]
+           ,[".",".",".","5",".",".",".",".","."]
+           ,[".",".",".",".",".",".",".",".","2"]
+           ,[".","9",".",".",".",".",".",".","7"]]
+
+console.log("isValidSudoku:",isValidSudoku(b3))
