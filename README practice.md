@@ -22,6 +22,8 @@ folder: `practice`
   - reshapematrix
   - balancedSplitString
   - maxBinaryTreeDepth
+  - spiralmatrix
+  - containerwithMostWater
 - removeKthMember
 - reverseLList
 - reverseString3ways
