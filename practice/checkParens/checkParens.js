@@ -103,6 +103,7 @@ let checkParensMap = (string) => {
     } 
   }
   if (array.length > 0) return false
+  console.log("array:",array)
   return true
 }
 
